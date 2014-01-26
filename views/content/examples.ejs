@@ -2,10 +2,10 @@
 
 <div id="recreationsPage">
 	<div id="chatLog">
-		<c:forEach items="${testRecords}" var="record" varStatus="status">
+		{{ for(var i in records) { }}
 			<div class="messageLine">
-				<span class="userNameTag">${record.user}</span> - <span class="messageTimestamp">${record.updatedDate}</span>: <span class="textLine">${record.text}</span>
-			</div>
-		</c:forEach>		
+				<span class="userNameTag">{{=records[i].name}}</span> - <span class="messageTimestamp">{{=records[i].updated_time}}</span>: <span class="textLine">{{=records[i].words}}</span>
+			</div>	
+		{{ } }}
 	</div>
 </div>

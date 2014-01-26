@@ -1,6 +1,13 @@
 /**
 	These are mapped the the routes object in mainServer.js
+	This is the eqivalent of a Controller class in a typical Spring-Java setup.
 **/
+
+// MySQL connection setup
+var mysql = require('mysql');
+var connection = mysql.createConnection('mysql://ebiUser:bung2020@54.243.177.112/PORTFOLIO_SITE?reconnect=true');
+connection.connect();
+
 /* GET index page. */
 exports.index = function(req, res){
   res.render('index.ejs', { title: 'Express' });
@@ -33,7 +40,13 @@ exports.resume = function(req, res) {
 /* AJAXed Coding Examples */
 exports.examples = function(req, res) {
 	console.log('Loading Examples...');
-	res.render('content/examples.ejs');
+	
+	connection.query('SELECT * FROM PORTFOLIO_SITE.EXAMPLE_MESSAGES', function(err, rows, fields) {
+		if( err ) throw err;
+		debugger;
+		
+		res.render('content/examples.ejs', {records: rows});
+	});
 };
 
 /* Links to stuff I do */
