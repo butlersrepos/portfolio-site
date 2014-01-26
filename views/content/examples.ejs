@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="css/recreations.css"/>
+
+<div id="recreationsPage">
+	<div id="chatLog">
+		<c:forEach items="${testRecords}" var="record" varStatus="status">
+			<div class="messageLine">
+				<span class="userNameTag">${record.user}</span> - <span class="messageTimestamp">${record.updatedDate}</span>: <span class="textLine">${record.text}</span>
+			</div>
+		</c:forEach>		
+	</div>
+</div>

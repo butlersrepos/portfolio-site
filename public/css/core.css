@@ -1,0 +1,26 @@
+/*
+	blue, darkblue, yellow, orange
+*/
+
+/* Standard quick stuff */
+.hidden { display: none; }
+
+/* Object stuff */
+.cloudObject { position: absolute; }
+
+/* quick keyword styles */
+.bold { font-weight: bold; }
+.underline { text-decoration: underline; }
+
+/* Core styles throughout */
+body {
+	
+}
+
+	#mainContentDiv {
+		position: relative;
+		background: lightblue;
+		width: 640px;
+		height: 480px;
+		margin: auto;
+	}

@@ -1,0 +1,60 @@
+html {
+	background: black url(../img/tree1.jpg) no-repeat 1em 1em;
+	background-size: 80em 50em;
+	overflow-y: scroll;
+	font-family: monospace;
+	font-size: 14px;
+}
+
+body {
+	font-size: 14px;
+}
+
+#mainDiv {
+	height: 35em;
+	margin: 1em;
+	position: relative;
+	zoom: 1;
+}
+
+	#navigationDiv {
+		position: absolute;
+		left: 1em;
+		top: 1em;
+		width: 10em;
+		height: 30em;
+	}
+	
+		.menuLink {
+			left: -20em;
+			width: 8em;
+			margin: 0em 0em 1em 0em;
+		}
+		
+	#contentDiv {
+		display: none;
+		position: absolute;
+		left: 90em;
+		top: 2em;
+		width: 43em;
+		height: 33em;
+		padding: 1em;
+		background-color:rgba(255,255,255,0.7);
+		border-radius: 3em;
+	}
+	
+		#frontTitle {
+			text-align: center;
+		}
+		
+		.sectionTitle {
+			color: black;
+			font-weight: bold;
+			font-size: 1.5em;
+			margin-bottom: 2em;
+		}
+		
+		.sectionContent {
+			font-weight: bold;
+			text-indent: 3em;
+		}
