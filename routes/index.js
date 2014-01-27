@@ -3,6 +3,8 @@
 	This is the eqivalent of a Controller class in a typical Spring-Java setup.
 **/
 
+// Moment plugin for time and date parsing
+var moment = require('moment');
 // MySQL connection setup
 var mysql = require('mysql');
 var connection = mysql.createConnection('mysql://ebiUser:bung2020@54.243.177.112/PORTFOLIO_SITE?reconnect=true');
@@ -43,8 +45,10 @@ exports.examples = function(req, res) {
 	
 	connection.query('SELECT * FROM PORTFOLIO_SITE.EXAMPLE_MESSAGES', function(err, rows, fields) {
 		if( err ) throw err;
-		debugger;
-		
+
+		for(var index in rows) {
+			rows[index].updated_time = moment(rows[index].updated_time ).format('MMM Do YYYY - HH:mm:ss');
+		}
 		res.render('content/examples.ejs', {records: rows});
 	});
 };

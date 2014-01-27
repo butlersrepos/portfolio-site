@@ -1,12 +1,14 @@
 {
-  "name": "application-name",
+  "name": "nodejs-portfolio-site",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node mainServer.js"
   },
   "dependencies": {
     "express": "3.4.8",
-    "jade": "*"
+    "ejs": "*",
+    "mysql": "*",
+    "moment": "~2.5.1"
   }
 }

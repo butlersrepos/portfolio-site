@@ -1,0 +1,12 @@
+#examplesPage {
+    border: 5px groove gray;
+    border-radius: 3em;
+    height: 30em;
+    background: white;
+    overflow: hidden;
+}
+
+    #chatLog {
+        overflow-y: scroll;
+        padding-top: 2em;
+    }
