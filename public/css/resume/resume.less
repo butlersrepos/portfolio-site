@@ -1,0 +1,120 @@
+#contentDiv {
+	height: auto;
+	width: 55em;
+	overflow: hidden;
+
+	#resumeTitle {
+		background: lightblue;
+		position: relative;
+		border-top-left-radius: 2em;
+		border-top-right-radius: 2em;
+
+		#resumeTitleLeft, #resumeTitleRight {
+			*display: inline;
+			display: inline-block;
+			zoom: 1;
+		}
+
+		#resumeTitleLeft {
+			width: 60%;
+			vertical-align: middle;
+			font-weight: bold;
+			font-size: 3em;
+			padding: .25em;
+			font-family: Century Gothic, Gothic, Verdana;
+		}
+
+		#resumeTitleRight {
+			text-align: right;
+			position: absolute;
+			right: 1.5em;
+			top: 0em;
+
+			.addressLine {
+				font-weight: bold;
+				font-family: Calibri;
+			}
+		}
+	}
+
+	#resumeBody {
+		font-family: Calibri, Verdana, Arial;
+		position: relative;
+		zoom: 1;
+
+		#resumeBodyLeft {
+			*display: inline;
+			display: inline-block;
+			zoom: 1;
+			padding-left: 1em;
+			vertical-align: top;
+			width: 75%;
+
+			.resumeHeader {
+				font-family: Century Gothic, Gothic, Verdana;
+				font-weight: bold;
+				text-decoration: underline;
+				margin-top: 1em;
+			}
+
+			.resumeDateEntry {
+				position: relative;
+				zoom: 1;
+				margin-top: 0.5em;
+
+				.resumeEvent {
+					*display: inline;
+					display: inline-block;
+					zoom: 1;
+					font-weight: bolder;
+				}
+
+				.resumeEventDate {
+					*display: inline;
+					display: inline-block;
+					zoom: 1;
+					position: absolute;
+					right: 0.5em;
+					width: 35%;
+				}
+			}
+
+			#experienceSection {
+				height: 25em;
+				overflow-y: scroll;
+			}
+
+			.assignmentEntry {
+
+				.resumeParagraph {
+					text-indent: 2em;
+				}
+			}
+		}
+
+		#resumeBodyRight {
+			*display: inline;
+			display: inline-block;
+			zoom: 1;
+			width: 20%;
+			padding-top: 1em;
+			background: lightgray;
+			position: absolute;
+			right: 0em;
+			top: 0em;
+			text-align: center;
+			height: 100%;
+			border-bottom-right-radius: 1.45em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+

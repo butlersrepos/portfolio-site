@@ -6,14 +6,9 @@
 // Moment plugin for time and date parsing
 var moment = require('moment');
 // MySQL connection setup
-var mysql = require('mysql');
-var connection = mysql.createConnection('mysql://ebiUser:bung2020@54.243.177.112/PORTFOLIO_SITE?reconnect=true');
-connection.connect();
-
-/* GET index page. */
-exports.index = function(req, res){
-  res.render('index.ejs', { title: 'Express' });
-};
+//var mysql = require('mysql');
+//var connection = mysql.createConnection('mysql://ebiUser:bung2020@54.243.177.112/PORTFOLIO_SITE?reconnect=true');
+//connection.connect();
 
 /* GET home page. */
 exports.home = function(req, res){
@@ -39,22 +34,23 @@ exports.resume = function(req, res) {
 	res.render('content/resume.ejs');
 };
 
+/* Links to stuff I do */
+exports.recreations = function(req, res) {
+    console.log('Loading Recreations...');
+    res.render('content/recreations.ejs');
+};
+
 /* AJAXed Coding Examples */
 exports.examples = function(req, res) {
 	console.log('Loading Examples...');
-	
-	connection.query('SELECT * FROM PORTFOLIO_SITE.EXAMPLE_MESSAGES', function(err, rows, fields) {
-		if( err ) throw err;
 
-		for(var index in rows) {
-			rows[index].updated_time = moment(rows[index].updated_time ).format('MMM Do YYYY - HH:mm:ss');
-		}
-		res.render('content/examples.ejs', {records: rows});
-	});
+//	connection.query('SELECT * FROM PORTFOLIO_SITE.EXAMPLE_MESSAGES', function(err, rows, fields) {
+//		if( err ) throw err;
+//
+//		for(var index in rows) {
+//			rows[index].updated_time = moment(rows[index].updated_time ).format('MMM Do YYYY - HH:mm:ss');
+//		}
+//		res.render('content/examples.ejs', {records: rows});
+//	});
 };
 
-/* Links to stuff I do */
-exports.recreations = function(req, res) {
-	console.log('Loading Recreations...');
-	res.render('content/recreations.ejs');
-};
