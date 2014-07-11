@@ -4,8 +4,6 @@ $(document).ready( function() {
 });
 
 function bindNavbarButtons() {
-	$('.menuLink').button();
-	
 	$('#aboutMeButton').off('click');
 	$('#aboutMeButton').on('click', function(event) {
 		$.bbq.pushState('#page=aboutMe');
@@ -28,5 +26,5 @@ function bindNavbarButtons() {
 };
 
 function slideInStart() {
-	slideInButtons();
+	PageTransitions.slideInButtons();
 };

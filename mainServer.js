@@ -21,11 +21,11 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(lessMiddleware(path.join(__dirname, 'public'), {
-    debug: true,
-//    src: __dirname + '/less',
-//    dest: __dirname + '/public',
-    force: true
+app.use(lessMiddleware('/less', {
+	force: true,
+	debug: true,
+	dest: '/css',
+	pathRoot: path.join(__dirname, 'public')
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 

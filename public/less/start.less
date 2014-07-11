@@ -1,0 +1,43 @@
+@numberOfNavs: 2;
+@topNavHeight: 5em;
+
+#navigationDiv {
+	width: 100%;
+	height: @topNavHeight;
+	display: flex;
+	position: fixed;
+	top: 0;
+	background: rgba(255,255,255,0.85);
+	z-index: 100;
+
+	.menuLink {
+		width: percentage(100 / @numberOfNavs);
+		height: 100%;
+		line-height: @topNavHeight;
+		border: 2px solid white;
+		box-sizing: border-box;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+
+#contentDiv {
+	background-color:rgba(255,255,255,0.7);
+	width: 100%;
+	margin-top: @topNavHeight;
+
+	#frontTitle {
+		text-align: center;
+	}
+
+	.sectionTitle {
+		color: black;
+		font-weight: bold;
+	}
+
+	.sectionContent {
+		font-weight: bold;
+		text-indent: 3em;
+	}
+}
