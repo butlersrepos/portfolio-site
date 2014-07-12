@@ -12,7 +12,7 @@ ejs.open = '{{'; ejs.close = '}}';
 var app = express();
 
 // all environments
-app.set('port', 80);
+app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.favicon());
@@ -38,12 +38,9 @@ if ('development' == app.get('env')) {
 // Routing Mappers //
 /////////////////////
 app.get('/', routes.start);
-app.get('/start*', routes.start);
-app.get('/home', routes.home);
-app.get('/aboutMe.action', routes.aboutMe);
-app.get('/resume.action', routes.resume);
-app.get('/examples.action', routes.examples);
-app.get('/recreations.action', routes.recreations);
+app.get('/aboutMe', routes.aboutMe);
+app.get('/resume', routes.resume);
+app.get('/api/resume/get', routes.resumeGet);
 
 // Startup Server!
 http.createServer(app).listen(app.get('port'), function(){

@@ -1,25 +1,32 @@
+
+@resumeEntryLeftSideWidth: 60%;
+
 #contentDiv {
 	#resumeTitle {
 		background: lightblue;
 		position: relative;
+		display: flex;
 
 		#resumeTitleLeft, #resumeTitleRight {
-			*display: inline;
 			display: inline-block;
-			zoom: 1;
 		}
 
 		#resumeTitleLeft {
 			vertical-align: middle;
+			width: 50%;
 			font-weight: bold;
 			font-family: Century Gothic, Gothic, Verdana;
+			box-sizing: border-box;
+			font-size: 1.75em;
+			line-height: 1.75em;
 		}
 
 		#resumeTitleRight {
 			text-align: right;
-			position: absolute;
-			right: 1.5em;
-			top: 0em;
+			position: relative;
+			right: 1%;
+			width: 50%;
+			box-sizing: border-box;
 
 			.addressLine {
 				font-weight: bold;
@@ -31,15 +38,16 @@
 	#resumeBody {
 		font-family: Calibri, Verdana, Arial;
 		position: relative;
-		zoom: 1;
 
 		#resumeBodyLeft {
-			*display: inline;
 			display: inline-block;
-			zoom: 1;
 			padding-left: 1em;
 			vertical-align: top;
 			width: 75%;
+
+			.resumeText {
+				width: @resumeEntryLeftSideWidth;
+			}
 
 			.resumeHeader {
 				font-family: Century Gothic, Gothic, Verdana;
@@ -50,23 +58,29 @@
 
 			.resumeDateEntry {
 				position: relative;
-				zoom: 1;
 				margin-top: 0.5em;
 
-				.resumeEvent {
-					*display: inline;
+				&.employerEntry:last-child {
+					margin-bottom: 2.25em;
+				}
+
+				.resumeEvent, .resumeEventDate {
 					display: inline-block;
-					zoom: 1;
-					font-weight: bolder;
+					font-size: 1.25em;
+				}
+
+				.resumeEvent {
+					font-weight: bold;
+					width: @resumeEntryLeftSideWidth;
 				}
 
 				.resumeEventDate {
-					*display: inline;
-					display: inline-block;
-					zoom: 1;
 					position: absolute;
-					right: 0.5em;
-					width: 35%;
+					right: 0.25em;
+					font-size: 0.85em;
+					text-align: right;
+					font-style: italic;
+					width: percentage((100 - @resumeEntryLeftSideWidth - 5)/100);
 				}
 			}
 
@@ -75,17 +89,25 @@
 			}
 
 			.assignmentEntry {
-
 				.resumeParagraph {
 					text-indent: 2em;
+					font-size: 0.75em;
+				}
+
+				&:after {
+					content: ' ';
+					height: 2px;
+					width: 2px;
+					box-sizing: border-box;
+					border: 1px solid black;
+					width: 100%;
+					display: block;
 				}
 			}
 		}
 
 		#resumeBodyRight {
-			*display: inline;
 			display: inline-block;
-			zoom: 1;
 			width: 20%;
 			background: lightgray;
 			position: absolute;

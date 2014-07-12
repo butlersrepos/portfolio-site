@@ -1,8 +1,13 @@
+/**
+ * Stop looking at my JS man! I don't minify here. Ain't nobody got time for that.
+ */
 $(document).ready( function() {
 	bindNavbarButtons();
-	setTimeout('slideInStart()', 1000);
 });
 
+/**
+ * Global namespace, like a boss?
+ */
 function bindNavbarButtons() {
 	$('#aboutMeButton').off('click');
 	$('#aboutMeButton').on('click', function(event) {
@@ -13,18 +18,4 @@ function bindNavbarButtons() {
 	$('#resumeButton').on('click', function(event) {
 		$.bbq.pushState('#page=resume');
 	});
-	
-	$('#examplesButton').off('click');
-	$('#examplesButton').on('click', function(event) {
-		$.bbq.pushState('#page=examples');
-	});
-	
-	$('#recreationButton').off('click');
-	$('#recreationButton').on('click', function(event) {
-		$.bbq.pushState('#page=recreations');
-	});
-};
-
-function slideInStart() {
-	PageTransitions.slideInButtons();
 };

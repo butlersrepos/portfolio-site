@@ -1,9 +1,10 @@
 @numberOfNavs: 2;
-@topNavHeight: 5em;
+@topNavHeight: 5;
+@topNavFont: 2;
 
 #navigationDiv {
 	width: 100%;
-	height: @topNavHeight;
+	height: @topNavHeight + 0em;
 	display: flex;
 	position: fixed;
 	top: 0;
@@ -11,21 +12,24 @@
 	z-index: 100;
 
 	.menuLink {
-		width: percentage(100 / @numberOfNavs);
+		width: percentage(100 / @numberOfNavs / 100);
 		height: 100%;
-		line-height: @topNavHeight;
 		border: 2px solid white;
 		box-sizing: border-box;
 		text-align: center;
 		font-weight: bold;
+		font-size: @topNavFont + 0em;
+		line-height: (@topNavHeight / @topNavFont) + 0em;
 	}
 }
 
 
 #contentDiv {
-	background-color:rgba(255,255,255,0.7);
+	background-color:rgba(215,215,215,1);
 	width: 100%;
-	margin-top: @topNavHeight;
+	margin-top: @topNavHeight + 0em;
+	padding: 4%;
+	box-sizing: border-box;
 
 	#frontTitle {
 		text-align: center;
