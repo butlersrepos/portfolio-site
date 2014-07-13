@@ -182,6 +182,7 @@ var resumeJson = {
 exports.start = function(req, res) {
 	console.log('Starting!');
 	res.render('start.ejs');
+	console.log(req.host)
 };
 
 /* A Short AJAXed Autobiography */
@@ -196,10 +197,7 @@ exports.resume = function(req, res) {
 	res.render('content/resume.ejs');
 };
 
-/**
- * RESTful API Stuff
- */
-
+/** RESTful API Stuff */
 exports.resumeGet = function(req, res) {
 	res.writeHead(200, {"Content-Type": "application/json"});
 	res.end( JSON.stringify(resumeJson) );
