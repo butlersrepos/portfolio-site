@@ -1,15 +1,12 @@
 
+@import "utils";
 @resumeEntryLeftSideWidth: 60%;
 
 #contentDiv {
 	#resumeTitle {
 		background: lightblue;
 		position: relative;
-		display: flex;
-
-		#resumeTitleLeft, #resumeTitleRight {
-			display: inline-block;
-		}
+		.flexify;
 
 		#resumeTitleLeft {
 			vertical-align: middle;

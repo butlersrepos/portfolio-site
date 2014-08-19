@@ -2,6 +2,8 @@
 @topNavHeight: 5;
 @topNavFont: 2;
 
+@import "utils";
+
 #navigationDiv {
 	width: 100%;
 	height: @topNavHeight + 0em;
@@ -10,6 +12,7 @@
 	top: 0;
 	background: rgba(255,255,255,0.85);
 	z-index: 100;
+	.flexify;
 
 	.menuLink {
 		width: percentage(100 / @numberOfNavs / 100);
@@ -20,6 +23,7 @@
 		font-weight: bold;
 		font-size: @topNavFont + 0em;
 		line-height: (@topNavHeight / @topNavFont) + 0em;
+		cursor: pointer;
 	}
 }
 
