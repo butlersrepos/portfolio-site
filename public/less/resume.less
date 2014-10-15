@@ -4,7 +4,7 @@
 
 #contentDiv {
 	#resumeTitle {
-		background: lightblue;
+		background: @blue;
 		position: relative;
 		.flexify;
 
@@ -27,7 +27,10 @@
 
 			.addressLine {
 				font-weight: bold;
-				font-family: Calibri;
+				font-family: Sans-Serif;
+				@media( max-width: @mediumSize ) {
+					font-size: 0.75em;
+				}
 			}
 		}
 	}
@@ -38,7 +41,7 @@
 
 		#resumeBodyLeft {
 			display: inline-block;
-			padding-left: 1em;
+			padding: 0 1% 0 4%;
 			vertical-align: top;
 			width: 75%;
 
@@ -101,17 +104,41 @@
 					display: block;
 				}
 			}
+
+			@media( max-width: @mediumSize ) {
+				width: 96%;
+				padding-right: 0;
+			}
 		}
 
+
 		#resumeBodyRight {
-			display: inline-block;
+			.left, .right {
+				margin-bottom: 1em;
+			}
+
+			#skillsTitle {
+				background: @black;
+				color: @silver;
+				font-weight: bold;
+			}
+
 			width: 20%;
-			background: lightgray;
+			background: @gray;
 			position: absolute;
 			right: 0em;
 			top: 0em;
 			text-align: center;
 			height: 100%;
+
+			@media( max-width: @mediumSize ) {
+				position: relative;
+				width: auto;
+
+				.left, .right {
+					font-size: 2em;
+				}
+			}
 		}
 	}
 }

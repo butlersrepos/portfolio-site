@@ -1,7 +1,7 @@
 /*
 	blue, darkblue, yellow, orange
 */
-
+@import "utils";
 /* Standard quick stuff */
 .hidden { display: none; }
 
@@ -14,23 +14,22 @@
 
 /* Core styles throughout */
 html {
-	background: black;
-	font-family: monospace;
+	background: @black;
+	font-family: sans-serif, monospace;
 
 	body {
 		margin: 0px;
-		@media (min-width: 240px) {
+		@media (min-width: @tinySize) {
 			font-size: 12px;
 		}
-		@media (min-width: 360px) {
+		@media (min-width: @smallSize) {
 			font-size: 16px;
 		}
-		@media (min-width: 640px) {
+		@media (min-width: @mediumSize) {
 			font-size: 20px;
 		}
-		@media (min-width: 1024px) {
+		@media (min-width: @regularSize) {
 			font-size: 24px;
 		}
 	}
-
 }
