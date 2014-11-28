@@ -13,7 +13,7 @@
 
 .thoughtsSection {
 	margin-bottom: 1.5em;
-	background: @blue;
+	background: $blue;
 	padding: 0.5em;
 
 	.title {
@@ -37,11 +37,11 @@
 		transition: all 1s ease-out;
 
 		.sectionContent {
-			border-left: 1px solid @black;
+			border-left: 1px solid $black;
 			padding: 0 0.25em 0 0.25em;
 			font-style: italic;
 			font-size: 0.75em;
-			background: @blue;
+			background: $blue;
 
 			&:last-child {
 				padding-bottom: 0.25em;

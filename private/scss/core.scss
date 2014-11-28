@@ -14,21 +14,21 @@
 
 /* Core styles throughout */
 html {
-	background: @black;
+	background: $black;
 	font-family: sans-serif, monospace;
 
 	body {
 		margin: 0px;
-		@media (min-width: @tinySize) {
+		@media (min-width: $tinySize) {
 			font-size: 12px;
 		}
-		@media (min-width: @smallSize) {
+		@media (min-width: $smallSize) {
 			font-size: 16px;
 		}
-		@media (min-width: @mediumSize) {
+		@media (min-width: $mediumSize) {
 			font-size: 20px;
 		}
-		@media (min-width: @regularSize) {
+		@media (min-width: $regularSize) {
 			font-size: 24px;
 		}
 	}
