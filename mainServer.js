@@ -3,7 +3,6 @@
  */
 var express = require('express');
 var routes = require('./routes');
-var lessMiddleware = require('less-middleware');
 var http = require('http');
 var path = require('path');
 var ejs = require('ejs'); 
@@ -21,12 +20,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(lessMiddleware('/less', {
-	force: true,
-	debug: true,
-	dest: '/css',
-	pathRoot: path.join(__dirname, 'public')
-}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
