@@ -277,56 +277,20 @@
 .stroke-black {
   stroke: #111; }
 
-.flexify, #navigationDiv {
+.flexify {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex; }
 
-#navigationDiv {
-  width: 100%;
-  height: 5em;
-  display: flex;
-  position: fixed;
-  top: 0;
-  background: #FF4136;
-  opacity: 0.85;
-  z-index: 100; }
-  #navigationDiv .menuLink {
-    width: 50%;
-    height: 100%;
-    border: 2px solid #fff;
-    box-sizing: border-box;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2em;
-    line-height: 2.5em;
-    cursor: pointer; }
-    #navigationDiv .menuLink .navIcons {
-      -webkit-transition: transform 2s ease-out;
-      -moz-transition: transform 2s ease-out;
-      -o-transition: transform 2s ease-out;
-      transition: transform 2s ease-out; }
-      @media (max-width: 640px) {
-        #navigationDiv .menuLink .navIcons {
-          display: none; } }
-    #navigationDiv .menuLink:hover .navIcons {
-      -ms-transform: rotate(720deg);
-      -webkit-transform: rotate(720deg);
-      transform: rotate(720deg); }
+.permanent-nav {
+  display: inline-block; }
 
-#contentDiv {
-  background-color: #ddd;
-  width: 100%;
-  margin-top: 5em;
+#about-me-nav, #resume-nav {
+  background: #FF4136;
+  text-align: center;
+  font-weight: bold;
+  border: 0.1em solid #ddd;
   padding: 4%;
-  box-sizing: border-box; }
-  #contentDiv #frontTitle {
-    text-align: center; }
-  #contentDiv .sectionTitle {
-    color: black;
-    font-weight: bold; }
-  #contentDiv .sectionContent {
-    font-weight: bold;
-    text-indent: 3em; }
+  font-size: 2em; }

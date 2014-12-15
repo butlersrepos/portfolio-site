@@ -179,9 +179,9 @@ var resumeJson = {
 };
 
 /* Main Start Page */
-exports.start = function(req, res) {
+exports.home = function(req, res) {
 	console.log('Starting!');
-	res.render('start.ejs');
+	res.render('home.ejs');
 	console.log(req.host)
 };
 
