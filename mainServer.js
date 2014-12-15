@@ -30,7 +30,7 @@ if ('development' == app.get('env')) {
 /////////////////////
 // Routing Mappers //
 /////////////////////
-app.get('/', routes.home);
+app.get('/', routes.start);
 app.get('/aboutMe', routes.aboutMe);
 app.get('/resume', routes.resume);
 app.get('/api/resume/get', routes.resumeGet);
