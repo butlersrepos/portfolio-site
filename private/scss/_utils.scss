@@ -12,3 +12,32 @@ $regularSize: 1024px;
 	display: -webkit-flex;
 	display: flex;
 }
+
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin transition-property($transition-property) {
+	-webkit-transition-property: unquote($transition-property);
+	-moz-transition-property: unquote($transition-property);
+	-o-transition-property: unquote($transition-property);
+	transition-property: unquote($transition-property);
+}
+
+@mixin transition-timing($transition-timing) {
+	-webkit-transition-timing-function: $transition-timing;
+	-moz-transition-timing-function: $transition-timing;
+	-o-transition-timing-function: $transition-timing;
+	transition-timing-function: $transition-timing;
+}
+
+@mixin transition-duration($duration) {
+	-webkit-transition-duration: $duration;
+	-moz-transition-duration: $duration;
+	-o-transition-duration: $duration;
+	transition-duration: $duration;
+}

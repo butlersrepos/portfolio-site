@@ -1,17 +1,36 @@
 @import "utils";
 
-#aboutMe {
-	.sectionContent {
+#main-content {
+	background-color: $silver;
+	width: 100%;
+	padding: 4%;
+	box-sizing: border-box;
+}
+
+#about-me {
+	#front-title {
+		text-align: center;
+	}
+	.section-title {
+		color: black;
+		font-weight: bold;
+	}
+	.content-section {
+		font-weight: bold;
+		text-indent: 3em;
+	}
+
+	.content-section {
 		max-width: 35em;
 		margin: auto;
 	}
 }
 
-#thoughtsTitle {
+#thoughts-title {
 	margin-top: 2em;
 }
 
-.thoughtsSection {
+.thoughts-section {
 	margin-bottom: 1.5em;
 	background: $blue;
 	padding: 0.5em;
@@ -36,7 +55,7 @@
 		-o-transition: all 1s ease-out;
 		transition: all 1s ease-out;
 
-		.sectionContent {
+		.content-section {
 			border-left: 1px solid $black;
 			padding: 0 0.25em 0 0.25em;
 			font-style: italic;

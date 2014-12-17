@@ -5,8 +5,11 @@
 
 // Make sure the charset is set appropriately
 
+// Bring in the settings config first.
+@import "foundation/settings";
+
 // Behold, here are all the Foundation components.
-  @import "foundation/components/grid";
+@import "foundation/components/grid";
 // @import "foundation/components/accordion";
 // @import "foundation/components/alert-boxes";
 // @import "foundation/components/block-grid";
@@ -42,4 +45,4 @@
 // @import "foundation/components/top-bar";
 // @import "foundation/components/type";
 // @import "foundation/components/offcanvas";
-// @import "foundation/components/visibility";
+@import "foundation/components/visibility";

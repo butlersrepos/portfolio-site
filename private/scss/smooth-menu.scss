@@ -1,0 +1,52 @@
+@import "utils";
+@import "foundation/components/global";
+
+
+@media #{$small-only} {
+	.menu-cover {
+		@include transition-property( 'max-height, padding, font-size' );
+		@include transition-duration( .75s );
+		@include transition-timing( cubic-bezier(0.68, -0.55, 0.265, 1.55) );
+	}
+
+	.menu-option {
+		@include transition-property( 'max-height, padding, font-size' );
+		@include transition-duration( 1.5s );
+		@include transition-timing( cubic-bezier(0.68, -0.55, 0.265, 1.55) );
+	}
+
+	.active {
+		.menu-cover {
+			max-height: 0px;
+			padding: 0px;
+			overflow: hidden;
+		}
+
+		.menu-option {
+			max-height: 5em;
+			font-size: 2em;
+		}
+
+		.menu-option:nth-child(2) {
+			transition-delay: 0.75s
+		}
+
+		.menu-option:nth-child(3) {
+			transition-delay: 1.5s
+		}
+	}
+
+
+	.inactive {
+		.menu-cover {
+			max-height: 5em;
+		}
+
+		.menu-option {
+			font-size: 0px;
+			max-height: 0px;
+			padding: 0px;
+			overflow: hidden;
+		}
+	}
+}

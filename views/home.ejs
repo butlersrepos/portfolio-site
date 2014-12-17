@@ -6,25 +6,36 @@
         <meta content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no' name='viewport' />
 		<link rel="stylesheet" href="css/font-awesome.css"/>
 		<link rel="stylesheet" href="css/foundation.css"/>
-		<!--<link rel="stylesheet" href="css/core.css"/>-->
 		<link rel="stylesheet" href="css/home.css"/>
+		<link rel="stylesheet" href="css/smooth-menu.css"/>
 		<link rel="shortcut icon" href="img/favicon.ico" />
 		<script src="js/jquery/jquery-1.8.2.js"></script>
 		<script src="js/jquery/jquery.ba-bbq.min.js"></script>
-		<script src="js/page_transitions.js"></script>
-		<script src="js/start.js"></script>
+		<script src="js/page-transitions.js"></script>
+		<script src="js/home.js"></script>
+		<script src="js/smooth-menu.js"></script>
 	<body>
-        <div id="navigationDiv" class="row">
-            <div id="about-me-nav" class="medium-6 small-12 column permanent-nav">
-                About Me
-                <i class="navIcons fa fa-info-circle"></i>
-            </div>
-            <div id="resume-nav" class="medium-6 small-12 column permanent-nav">
-                Resume
-                <i class="navIcons fa fa-file-text"></i>
-            </div>
+        <div id="top-navigation" class="inactive row">
+			<div class="show-for-small-only small-12 permanent-nav menu-cover js-menu-cover">
+				MENU
+				<i class="nav-icons fa fa-list"></i>
+			</div>
+	        <span>
+				<div id="about-me-nav" class="medium-4 small-12 column permanent-nav menu-option js-about-me-nav">
+	                About Me
+	                <i class="nav-icons fa fa-info-circle"></i>
+	            </div>
+	            <div id="resume-nav" class="medium-4 small-12 column permanent-nav menu-option js-resume-nav">
+	                Resum&#233;
+	                <i class="nav-icons fa fa-file-text"></i>
+	            </div>
+	            <div id="work-nav" class="medium-4 small-12 column permanent-nav menu-option js-work-nav">
+	                Works
+	                <i class="nav-icons fa fa-folder-open"></i>
+	            </div>
+			</span>
         </div>
-        <div id="contentDiv">
+        <div id="main-content">
         </div>
 	</body>
 </html>

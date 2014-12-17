@@ -1,18 +1,26 @@
 @import "utils";
 
+html {
+	background: $silver;
+}
+
 .permanent-nav {
+	cursor: pointer;
 	display: inline-block;
 }
 
-#about-me-nav, #resume-nav {
-	background: $red;
-	text-align: center;
-	font-weight: bold;
-	border: 0.1em solid $silver;
-	padding: 4%;
-	font-size: 2em;
+#top-navigation {
 }
 
+.permanent-nav {
+	background: $red;
+	border: 0.1em solid $silver;
+	font-size: 2em;
+	font-weight: bold;
+	padding: 4%;
+	text-align: center;
+	white-space: nowrap;
+}
 
 //
 //$numberOfNavs: 2;
@@ -42,7 +50,7 @@
 //		line-height: ($topNavHeight / $topNavFont) + 0em;
 //		cursor: pointer;
 //
-//		.navIcons {
+//		.nav-icons {
 //			-webkit-transition: transform 2s ease-out;
 //			-moz-transition: transform 2s ease-out;
 //			-o-transition: transform 2s ease-out;
@@ -53,7 +61,7 @@
 //		}
 //
 //		&:hover {
-//			.navIcons {
+//			.nav-icons {
 //				-ms-transform: rotate(720deg);
 //				-webkit-transform: rotate(720deg);
 //				transform: rotate(720deg);
@@ -63,25 +71,3 @@
 //}
 //
 //
-//#contentDiv {
-//	background-color: $silver;
-//	width: 100%;
-//	margin-top: $topNavHeight + 0em;
-//	padding: 4%;
-//	box-sizing: border-box;
-//
-//	#frontTitle {
-//		text-align: center;
-//	}
-//
-//	.sectionTitle {
-//		color: black;
-//		font-weight: bold;
-//	}
-//
-//	.sectionContent {
-//		font-weight: bold;
-//		text-indent: 3em;
-//	}
-//
-//}
