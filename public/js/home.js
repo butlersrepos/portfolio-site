@@ -3,13 +3,16 @@ var EB = EB || {};
 EB.Home = {
 	bindNavbarButtons   : function bindNavbarButtons() {
 		$( '.js-about-me-nav' ).off( 'click' ).on( 'click', function( event ) {
-			$.bbq.pushState( '#page=aboutMe' );
+			$.bbq.pushState( '#page=aboutme' );
 		} );
 
 		$( '.js-resume-nav' ).off( 'click' ).on( 'click', function( event ) {
 			$.bbq.pushState( '#page=resume' );
 		} );
 
+		$( '.js-works-nav' ).off( 'click' ).on( 'click', function( event ) {
+			$.bbq.pushState( '#page=works' );
+		} );
 	},
 	setupGoogleAnalytics: function setupGoogleAnalytics() {
 		(function( i, s, o, g, r, a, m ) {
@@ -33,7 +36,7 @@ $( document ).ready( function() {
 	EB.Home.bindNavbarButtons();
 	EB.Home.setupGoogleAnalytics();
 	EB.PageTransitions.setupHashEvent();
-	EB.SmoothMenu.init( $('#top-navigation') );
+	EB.SmoothMenu.init( $( '#top-navigation' ) );
 } );
 
 
