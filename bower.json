@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-portfolio-site",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Butler <ericbutler000@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "www.ericbutler.info",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.8.3",
+    "underscore": "~1.8.1",
+    "jquery.bbq": "~1.2.1"
+  }
+}
