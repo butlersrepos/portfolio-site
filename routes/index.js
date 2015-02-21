@@ -9,7 +9,7 @@ var resumeJson = {
 	'firstname'  : 'Eric',
 	'lastname'   : 'Butler',
 	'linkedin_id': 'ericmbutler',
-	'bio_data'   : {
+	bio_data   : {
 		'email'     : 'ericbutler00@gmail.com',
 		'phone'     : '(419) 366-9274',
 		'website'   : 'ericbutler.info',
@@ -112,7 +112,7 @@ var resumeJson = {
 					'start'      : 'February 2013',
 					'end'        : 'June 2013',
 					'project'    : 'Investments Team App Support',
-					'description': 'My involvement in this project was a support nature but required me to familiarize myself with numerous web apps that the team already supported across various platforms. I became acclimated to debugging and improving processes in C#, Informatica, SQL, and Maestro as well as my wheelhouse Java. This team was deeply invested in the Agile methodology.'
+					'description': 'My involvement in this project required me to familiarize myself with numerous web apps that the team already supported across various platforms. I became acclimated to debugging and improving processes in C#, Informatica, SQL, and Maestro as well as my wheelhouse Java. This team was deeply invested in the Agile methodology.'
 				},
 				{
 					'client'     : 'Safelite',
@@ -189,7 +189,7 @@ function aboutMePage( req, res ) {
 // An AJAXed Resume
 function resumePage( req, res ) {
 	console.log( 'Loading Resume...' );
-	res.render( 'content/resume.ejs' );
+	res.render( 'content/resume.ejs', { resume: resumeJson } );
 };
 
 // RESTful API Stuff

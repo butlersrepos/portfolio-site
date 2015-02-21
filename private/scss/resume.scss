@@ -33,9 +33,13 @@
 	text-decoration: underline;
 }
 
+.assignment-entry .resume-date-entry {
+	background: $gray;
+}
+
 .resume-date-entry {
 	.resume-event {
-		font-size: 1.25em;
+		font-size: 1.5em;
 		font-weight: bold;
 	}
 }
@@ -50,7 +54,6 @@
 
 .resume-paragraph {
 	text-indent: 2em;
-	font-size: 0.75em;
 }
 
 #skills-title {
@@ -58,6 +61,8 @@
 	color: $silver;
 	font-weight: bold;
 	text-align: center;
+	margin: 0;
+
 	@media #{$small-only} {
 		margin-top: 1.5em;
 	}
@@ -66,6 +71,8 @@
 .skill-set {
 	margin: 1em 0 0 0;
 	text-align: center;
+	font-size: 1.5em;
+
 	@media #{$medium-up} {
 		margin:0 0 1em 0;
 	}
