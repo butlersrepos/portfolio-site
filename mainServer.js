@@ -103,10 +103,10 @@ function getGithubReposInfo() {
 	var githubRequest = https.request( {
 		host   : "api.github.com",
 		method : 'GET',
-		path   : "/users/Sarophym/repos",
+		path   : "/users/butlersrepos/repos",
 		headers: {
 			'Accept'    : 'application/vnd.github.v3+json',
-			'User-Agent': 'Sarophym'
+			'User-Agent': 'butlersrepos'
 		}
 	}, function( res ) {
 		var totalMessage = '';
