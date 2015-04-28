@@ -1,26 +1,19 @@
 <div id="resume">
 	<header id="resume-title" class="small-12 column">
-		<div id="resume-title-name" class="small-4 medium-8 columns">Eric Butler</div>
+		<div id="resume-title-name" class="small-4 medium-8 columns">{{= resume.firstname }} {{= resume.lastname }}</div>
 		<div id="resume-title-info" class="small-8 medium-4 columns">
-			<div class="address-line">Columbus, OH</div>
-			<div class="address-line">ericbutler000@gmail.com</div>
-			<div class="address-line">(419)-366-9274</div>
+			<div class="address-line">{{= resume.bio_data.location }}</div>
+			<div class="address-line">{{= resume.bio_data.email }}</div>
+			<div class="address-line">{{= resume.bio_data.phone }}</div>
 		</div>
 	</header>
 	<section id="resume-body" class="row collapse">
-		<div id="resume-body-left" class="small-12 medium-9 columns">
+		<div id="resume-body-left" class="small-12 medium-12 columns">
 			<div class="resume-header">EDUCATION</div>
-			<div class="row resume-date-entry">
-				<div class="small-12 columns resume-event">Economics, Master of Arts</div>
-				<div class="small-8 columns resume-text">Bowling Green State University, Bowling Green, OH</div>
-				<div class="small-4 columns resume-event-date">Aug 2009</div>
-			</div>
-
-			<div class="row resume-date-entry">
-				<div class="small-12 columns resume-event">Philosophy &amp; Economics, Bachelor of Arts</div>
-				<div class="small-8 columns resume-text">Bowling Green State University, Bowling Green, OH</div>
-				<div class="small-4 columns resume-event-date">Dec 2007</div>
-			</div>
+			{{ for( var edu in resume.bio_data.education.schools ) { }}
+				{{ var education = resume.bio_data.education.schools[edu]; }}
+				{{ include ../templates/education-entry.ejs }}
+			{{ } }}
 
 			<div id="experience-title" class="resume-header">EXPERIENCE</div>
 
@@ -36,40 +29,5 @@
 				{{ include ../templates/assignment-entry.ejs }}
 			{{ } }}
 		</div>
-		<section id="resumeBodyRight" class="small-12 medium-3 columns">
-			<h2 id="skills-title">Skills &amp; Techs</h2>
-			<div class="row">
-				<div class="medium-12 small-4 columns skill-set">
-					<div>SVN</div>
-					<div>Git</div>
-					<div>Agile</div>
-				</div>
-				<div class="medium-12 small-4 columns skill-set">
-					<div>Eclipse</div>
-					<div>IntelliJ</div>
-				</div>
-				<div class="medium-12 small-4 columns skill-set">
-					<div>Tomcat</div>
-					<div>JBoss</div>
-					<div>Bamboo</div>
-				</div>
-				<div class="medium-12 medium-offset-0 small-offset-1 small-5 columns skill-set">
-					<div>Node.js</div>
-					<div>Spring 2.5+</div>
-					<div>Struts</div>
-					<div>Maven</div>
-				</div>
-				<div class="medium-12 small-5 columns end skill-set">
-					<div>HTML5</div>
-					<div>CSS3</div>
-					<div>SASS</div>
-					<div>LESS</div>
-					<div>Compass</div>
-					<div>Java</div>
-					<div>Javascript</div>
-					<div>JQuery</div>
-				</div>
-			</div>
-		</section>
 	</section>
 </div>

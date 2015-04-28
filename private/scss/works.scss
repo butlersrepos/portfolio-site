@@ -13,6 +13,9 @@
 
 	.repo-entry {
 		margin-bottom: .75em;
+		background: $red;
+        border-right: 2px solid $black;
+        border-bottom: 2px solid $black;
 
 	  	&:nth-child(2n) {
 		  background: $gray;
