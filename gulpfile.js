@@ -31,7 +31,7 @@ gulp.task( 'devmode', ['build:css', 'build:js', 'nodemon'], function() {
 	browserSync.init( {
 		files  : ['./public/**/*.*', './views/**/*.ejs'],
 		proxy  : 'http://localhost/',
-		port   : 8080,
+		port   : 8000,
 		browser: ['google chrome']
 	} );
 } );

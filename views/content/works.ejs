@@ -15,7 +15,7 @@
 				{{= moment(github_repos[i].updated_at, "YYYY-MM-DD HH:mm:ss").format("MMM Do, YYYY") }}
 			</div>
 			<div class="repo-description small-12 medium-7 column">
-				{{ if( github_repos[i].description.length == 0 ) { }}
+				{{ if( !github_repos[i].description || github_repos[i].description.length == 0 ) { }}
 				No description found.
 				{{ } else { }}
 				{{= github_repos[i].description }}

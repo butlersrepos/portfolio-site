@@ -6,6 +6,7 @@ var routes = require( './routes/index' );
 var http = require( 'http' );
 var https = require( 'https' );
 var path = require( 'path' );
+var util = require('util');
 var moment = require( 'moment' );
 // Setup EJS wit handlebars like syntax
 var ejs = require( 'ejs' );
@@ -15,7 +16,7 @@ ejs.close = '}}';
 var app = express();
 
 // all environments
-app.set( 'port', 80 );
+app.set( 'port', 8000 );
 app.set( 'views', path.join( __dirname, 'views' ) );
 app.set( 'view engine', 'ejs' );
 app.use( express.favicon() );

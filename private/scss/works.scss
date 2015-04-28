@@ -13,6 +13,10 @@
 
 	.repo-entry {
 		margin-bottom: .75em;
+
+	  	&:nth-child(2n) {
+		  background: $gray;
+		}
 	}
 
 	.repo-name {

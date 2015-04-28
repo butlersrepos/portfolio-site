@@ -9,7 +9,7 @@ var resumeJson = {
 	'firstname'  : 'Eric',
 	'lastname'   : 'Butler',
 	'linkedin_id': 'ericmbutler',
-	bio_data   : {
+	bio_data     : {
 		'email'     : 'ericbutler00@gmail.com',
 		'phone'     : '(419) 366-9274',
 		'website'   : 'ericbutler.info',
@@ -74,16 +74,25 @@ var resumeJson = {
 		'experience': {
 			'positions': [
 				{
-					'title'   : 'Solutions Architect',
-					'employer': 'Leading EDJE',
-					'start'   : 'July 2013',
-					'end'     : 'Present'
+					title   : "Software Journeyman",
+					employer: "Pillar Technology",
+					link    : "http://pillartechnology.com",
+					start   : "March 2015",
+					end     : "Present"
 				},
 				{
-					'title'   : 'Senior Consultant',
-					'employer': 'Sogeti USA',
-					'start'   : 'February 2011',
-					'end'     : 'June 2013'
+					title   : 'Solutions Architect',
+					employer: 'Leading EDJE',
+					link    : "http://leadingedje.com/",
+					start   : 'July 2013',
+					end     : 'February 2014'
+				},
+				{
+					title   : 'Senior Consultant',
+					employer: 'Sogeti USA',
+					link    : "http://www.us.sogeti.com/",
+					start   : 'February 2011',
+					end     : 'June 2013'
 				}
 			],
 			'projects' : [
@@ -194,7 +203,7 @@ function resumePage( req, res ) {
 
 // RESTful API Stuff
 function getJsonResume( req, res ) {
-	res.writeHead( 200, {"Content-Type": "application/json"} );
+	res.writeHead( 200, { "Content-Type": "application/json" } );
 	res.end( JSON.stringify( resumeJson ) );
 };
 

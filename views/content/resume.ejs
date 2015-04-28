@@ -23,15 +23,12 @@
 			</div>
 
 			<div id="experience-title" class="resume-header">EXPERIENCE</div>
+
 			<div id="employers">
-				<div class="row resume-date-entry employer-entry">
-					<div class="small-8 columns resume-event">Solutions Architect, <a target="_blank" href="http://leadingedje.com/">Leading EDJE</a></div>
-					<div class="small-4 columns resume-event-date">July 2013 - Present</div>
-				</div>
-				<div class="row resume-date-entry employerEntry">
-					<div class="small-8 columns resume-event">Senior Consultant, <a target="_blank" href="http://www.us.sogeti.com/">Sogeti USA</a></div>
-					<div class="small-4 columns resume-event-date">Mar 2011 - June 2013</div>
-				</div>
+				{{ for( var e in resume.bio_data.experience.positions ) { }}
+					{{ var employer = resume.bio_data.experience.positions[e]; }}
+					{{ include ../templates/employer-entry.ejs }}
+				{{ } }}
 			</div>
 
 			{{ for( var p in resume.bio_data.experience.projects ) { }}
