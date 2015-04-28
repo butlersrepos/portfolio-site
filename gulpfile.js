@@ -29,7 +29,7 @@ gulp.task( 'devmode', ['build:css', 'build:js', 'nodemon'], function() {
 	gulp.watch( ['./public/js/*.js', '!vendor.js', '!app.js'], ['inject:js'] );
 	// Start up browser-sync and nodemon for total-reloading
 	browserSync.init( {
-		files  : ['./public/**/*.*', './views/**/*.ejs'],
+		files  : ['./public/**/*.*', './views/**/*.ejs', './views/**/*.jade'],
 		proxy  : 'http://localhost/',
 		port   : 8000,
 		browser: ['google chrome']

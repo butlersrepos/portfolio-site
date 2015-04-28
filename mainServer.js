@@ -6,8 +6,9 @@ var routes = require( './routes/index' );
 var http = require( 'http' );
 var https = require( 'https' );
 var path = require( 'path' );
-var util = require('util');
 var moment = require( 'moment' );
+var engines = require( 'consolidate' );
+
 // Setup EJS wit handlebars like syntax
 var ejs = require( 'ejs' );
 ejs.open = '{{';
@@ -15,35 +16,32 @@ ejs.close = '}}';
 
 var app = express();
 
+app.engine( 'jade', engines.jade );
+app.engine( 'ejs', engines.ejs );
+
 // all environments
 app.set( 'port', 80 );
 app.set( 'views', path.join( __dirname, 'views' ) );
-app.set( 'view engine', 'ejs' );
-app.use( express.favicon() );
-app.use( express.logger( 'dev' ) );
-app.use( express.json() );
-app.use( express.urlencoded() );
-app.use( express.methodOverride() );
-app.use( app.router );
+app.use( require( 'serve-favicon' )( __dirname + '/public/img/favicon.ico' ) );
+app.use( require( 'body-parser' ).json() );
+app.use( require( 'body-parser' ).urlencoded( { extended: false } ) );
+app.use( require( 'morgan' )( 'dev' ) );
 app.use( express.static( path.join( __dirname, 'public' ) ) );
 
 // development only
 if( 'development' == app.get( 'env' ) ) {
-	app.use( express.errorHandler() );
+	app.use( require( 'errorhandler' )() );
 }
 
 /////////////////////
 // Routing Mappers //
-/////////////////////
-app.get( '/', routes.home );
-app.get( '/aboutme', routes.aboutMe );
-app.get( '/resume', routes.resume );
-app.get( '/works', routes.works );
-app.get( '/api/resume/get', routes.resumeGet );
+/////////////use////////
+app.use( '/', routes );
 
 var bitbucketAuth = 'Basic U2Fyb3BoeW06a3B4bGlsb3RhY29uMTAzNA==';
 var repoUpdateInHours = 12;
-// Startup Server!
+
+// Startup Server!app
 http.createServer( app ).listen( app.get( 'port' ), function() {
 	// We are live!
 	console.log( 'Main Server listening on port ' + app.get( 'port' ) );

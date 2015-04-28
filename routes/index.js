@@ -1,11 +1,8 @@
-// These are mapped the the routes object in mainServer.js
-// This is the equivalent of a Controller class in a typical Spring-Java setup.
-
-var app = require( 'express' )();
 // Moment plugin for time and date parsing
 var moment = require( 'moment' );
-
 var resumeJson = require( '../private/my-resume' );
+var express = require( 'express' );
+var router = express.Router();
 
 // Main Start Page
 function homePage( req, res ) {
@@ -17,7 +14,7 @@ function homePage( req, res ) {
 // A Short AJAXed Autobiography
 function aboutMePage( req, res ) {
 	console.log( 'Loading AboutMe...' );
-	res.render( 'content/aboutme.ejs' );
+	res.render( 'content/aboutme.jade' );
 };
 
 // An AJAXed Resume
@@ -42,11 +39,11 @@ function worksPage( req, res ) {
 	} );
 };
 
+router.get( '/', homePage );
+router.get( '/aboutme', aboutMePage );
+router.get( '/resume', resumePage );
+router.get( '/works', worksPage );
+router.get( '/api/resume/get', getJsonResume );
+
 // Exposed pieces
-module.exports = {
-	home     : homePage,
-	aboutMe  : aboutMePage,
-	resume   : resumePage,
-	resumeGet: getJsonResume,
-	works    : worksPage
-};
+module.exports = router;
