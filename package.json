@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "predeploy": "git pull && forever stop mainServer.js &",
+    "deploy": "npm install && bower install --allow-root && gulp build:css",
+    "postdeploy": "forever start mainServer.js",
     "start": "node mainServer.js"
   },
   "dependencies": {
