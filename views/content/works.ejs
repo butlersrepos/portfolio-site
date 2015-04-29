@@ -7,22 +7,22 @@
 			<h2 class="medium-2 columns repo-column-headers">Last Update</h2>
 			<h2 class="medium-7 columns repo-column-headers">Description</h2>
 		</div>
-		{{ for( var i = 0; i < github_repos.length; i++ ) { }}
+		<% for( var i = 0; i < github_repos.length; i++ ) { %>
 		<div class="row repo-entry">
-			<div class="repo-name small-12 medium-3 column">{{= github_repos[i].name }}</div>
+			<div class="repo-name small-12 medium-3 column"><%= github_repos[i].name %></div>
 			<div class="repo-date small-12 medium-2 column">
 				<span class="hide-for-medium-up repo-date-label">Last Update:</span>
-				{{= moment(github_repos[i].updated_at, "YYYY-MM-DD HH:mm:ss").format("MMM Do, YYYY") }}
+				<%= moment(github_repos[i].updated_at, "YYYY-MM-DD HH:mm:ss").format("MMM Do, YYYY") %>
 			</div>
 			<div class="repo-description small-12 medium-7 column">
-				{{ if( !github_repos[i].description || github_repos[i].description.length == 0 ) { }}
+				<% if( !github_repos[i].description || github_repos[i].description.length == 0 ) { %>
 				No description found.
-				{{ } else { }}
-				{{= github_repos[i].description }}
-				{{ } }}
+				<% } else { %>
+				<%= github_repos[i].description %>
+				<% } %>
 			</div>
 		</div>
-		{{ } }}
+		<% } %>
 	</div>
 
 	<div class="row">
@@ -33,22 +33,22 @@
 			<h2 class="medium-2 columns repo-column-headers">Last Update</h2>
 			<h2 class="medium-7 columns repo-column-headers">Description</h2>
 		</div>
-		{{ for( var i = 0; i < bitbucket_repos.length; i++ ) { }}
+		<% for( var i = 0; i < bitbucket_repos.length; i++ ) { %>
 		<div class="row repo-entry">
-			<div class="repo-name small-12 medium-3 column">{{= bitbucket_repos[i].name }}</div>
+			<div class="repo-name small-12 medium-3 column"><%= bitbucket_repos[i].name %></div>
 			<div class="repo-date small-12 medium-2 column">
 				<span class="hide-for-medium-up repo-date-label">Last Update:</span>
-				{{= moment(bitbucket_repos[i].updated_on, "YYYY-MM-DD HH:mm:ss. Z").format("MMM Do, YYYY") }}
+				<%= moment(bitbucket_repos[i].updated_on, "YYYY-MM-DD HH:mm:ss. Z").format("MMM Do, YYYY") %>
 			</div>
 			<div class="repo-description small-12 medium-7 column">
-				{{ if( bitbucket_repos[i].description.length == 0 ) { }}
+				<% if( bitbucket_repos[i].description.length == 0 ) { %>
 				No description found.
-				{{ } else { }}
-				{{= bitbucket_repos[i].description }}
-				{{ } }}
+				<% } else { %>
+				<%= bitbucket_repos[i].description %>
+				<% } %>
 			</div>
 		</div>
-		{{ } }}
+		<% } %>
 	</div>
-	<div class="medium-offset-7 medium-5 small-12 end column repos-updated-last">Repos retrieved: {{= moment(updated_last).format("h:mma MMM Do, YYYY") }}</div>
+	<div class="medium-offset-7 medium-5 small-12 end column repos-updated-last">Repos retrieved: <%= moment(updated_last).format("h:mma MMM Do, YYYY") %></div>
 </div>

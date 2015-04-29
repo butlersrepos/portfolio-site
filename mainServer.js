@@ -10,14 +10,11 @@ var moment = require( 'moment' );
 var engines = require( 'consolidate' );
 
 // Setup EJS wit handlebars like syntax
-var ejs = require( 'ejs' );
-ejs.open = '{{';
-ejs.close = '}}';
 
 var app = express();
 
 app.engine( 'jade', engines.jade );
-app.engine( 'ejs', engines.ejs );
+app.engine( 'ejs', require('ejs').renderFile );
 
 // all environments
 app.set( 'port', 80 );
