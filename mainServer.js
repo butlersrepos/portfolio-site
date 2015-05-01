@@ -1,6 +1,4 @@
-/**
- * Module dependencies.
- */
+/// <reference path="typings/node/node.d.ts"/>
 var express = require( 'express' );
 var routes = require( './routes/index' );
 var http = require( 'http' );
@@ -10,7 +8,6 @@ var moment = require( 'moment' );
 var engines = require( 'consolidate' );
 
 // Setup EJS wit handlebars like syntax
-
 var app = express();
 
 app.engine( 'jade', engines.jade );
