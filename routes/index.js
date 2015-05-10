@@ -7,7 +7,7 @@ var router = express.Router();
 // Main Start Page
 function homePage( req, res ) {
 	console.log( 'Starting!' );
-	res.render( 'home.ejs' );
+	res.render( 'home.jade' );
 	console.log( req.host )
 };
 
@@ -20,7 +20,7 @@ function aboutMePage( req, res ) {
 // An AJAXed Resume
 function resumePage( req, res ) {
 	console.log( 'Loading Resume...' );
-	res.render( 'content/resume.ejs', { resume: resumeJson } );
+	res.render( 'content/resume.jade', { resume: resumeJson } );
 };
 
 // RESTful API Stuff
@@ -31,7 +31,7 @@ function getJsonResume( req, res ) {
 
 // List of github repos etc
 function worksPage( req, res ) {
-	res.render( 'content/works.ejs', {
+	res.render( 'content/works.jade', {
 		moment         : moment,
 		updated_last   : global.repos_updated_last,
 		github_repos   : global.github_repos,

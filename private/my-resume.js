@@ -4,7 +4,7 @@ module.exports = {
 	linkedin_id: 'ericmbutler',
 	bio_data   : {
 		location    : "Columbus, OH",
-		email       : 'ericbutler00@gmail.com',
+		email       : 'ericbutler000@gmail.com',
 		phone       : '(419) 366-9274',
 		website     : 'ericbutler.info',
 		skills      : {
