@@ -1,0 +1,28 @@
+div#resume
+	header#resume-title.small12.columns
+		div#resume-title-name.small-4.medium-8.columns
+			= resume.firstname + ' ' + resume.lastname
+		div#resume-title-info.small-8.medium-4.columns
+			div.address-line
+				= resume.bio_data.location
+			div.address-line
+				= resume.bio_data.email
+			div.address-line
+				= resume.bio_data.phone
+	section#resume-body.row.collapse
+		div#resume-body-left.small-12.columns
+			div.resume-header EDUCATION
+			- for( var edu in resume.bio_data.education.schools )
+				- var school = resume.bio_data.education.schools[edu];
+					include ../partials/education-entry.jade
+
+			div#experience-title.resume-header EXPERIENCE
+
+			div#employers
+				- for( var e in resume.bio_data.experience.positions )
+					- var employer = resume.bio_data.experience.positions[e];
+						include ../partials/employer-entry.jade
+
+			- for( var p in resume.bio_data.experience.projects )
+				- var entry = resume.bio_data.experience.projects[p];
+					include ../partials/assignment-entry.jade

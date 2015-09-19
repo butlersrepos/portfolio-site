@@ -1,0 +1,20 @@
+div.row
+	h1.small-12.column= repoTitle
+	div.row.hide-for-small
+		h2.medium-3.column.repo-column Project
+		h2.medium-2.column.repo-column Last Update
+		h2.medium-7.column.repo-column Description
+	- for( var i = 0; i < repos.length; i++ )
+		div.row.repo-entry
+			div.repo-name.small-12.medium-3.column
+				= repos[i].name
+			div.repo-date.small-12.medium-2.column
+				span.hide-for-medium-up.repo-date-label Last Update:
+				- var date = repos[i].updated_at || repos[i].updated_on
+				- var dateParse = repos[i].updated_at ? "YYYY-MM-DD HH:mm:ss" : "YYYY-MM-DD HH:mm:ss. Z"
+				= moment( date, dateParse ).format( "MMM Do, YYYY" )
+			div.repo-description.small-12.medium-7.column
+				if( !repos[i].description || repos[i].description.length == 0 )
+					| No description found.
+				else
+					= repos[i].description

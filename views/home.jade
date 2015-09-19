@@ -1,0 +1,39 @@
+doctype html
+html
+	head
+		title Eric Butler
+		meta(content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no', name='viewport')
+		//- inject:css
+		link(rel="stylesheet", href="/css/aboutme.css")
+		link(rel="stylesheet", href="/css/font-awesome.css")
+		link(rel="stylesheet", href="/css/foundation.css")
+		link(rel="stylesheet", href="/css/home.css")
+		link(rel="stylesheet", href="/css/normalize.css")
+		link(rel="stylesheet", href="/css/resume.css")
+		link(rel="stylesheet", href="/css/smooth-menu.css")
+		link(rel="stylesheet", href="/css/works.css")
+		//- endinject
+		link(rel='shortcut icon', href='img/favicon.ico')
+		//- inject:js
+		script(src="/js/vendor.js")
+		script(src="/js/aboutme.js")
+		script(src="/js/home.js")
+		script(src="/js/page-transitions.js")
+		script(src="/js/smooth-menu.js")
+		//- endinject
+	body
+		#top-navigation.inactive.row
+			.show-for-small-only.small-12.permanent-nav.menu-cover.js-menu-cover
+				| MENU
+				i.nav-icons.fa.fa-list
+			span
+				#about-me-nav.medium-4.small-12.column.permanent-nav.menu-option.js-about-me-nav
+					| About Me
+					i.nav-icons.fa.fa-info-circle
+				#resume-nav.medium-4.small-12.column.permanent-nav.menu-option.js-resume-nav
+					| Resum&eacute;
+					i.nav-icons.fa.fa-file-text
+				#work-nav.medium-4.small-12.column.permanent-nav.menu-option.js-works-nav
+					| Works
+					i.nav-icons.fa.fa-folder-open
+		#main-content.row
