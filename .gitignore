@@ -1,5 +1,6 @@
-.idea/
-node_modules/
-bower_components/
-public/css/
+.idea
+node_modules
+bower_components
+public/css
 public/js/app.js
+typings
