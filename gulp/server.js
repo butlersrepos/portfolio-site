@@ -6,9 +6,9 @@ gulp.task( 'nodemon', function( cb ) {
 	var called = false;
 	return $.nodemon( {
 		// nodemon our expressjs server
-		script: 'mainServer.js',
+		script: 'app.js',
 		// watch core server file(s) that require server restart on change
-		watch : ['mainServer.js', './routes/index.js']
+		watch : ['app.js', './routes/index.js']
 	} )
 		.on( 'start', function onStart() {
 			// ensure start only got called once

@@ -30,10 +30,6 @@ module.exports = {
 				"Tomcat",
 				"JBoss"
 			],
-			"OSes"            : [
-				"Windows",
-				"Linux"
-			],
 			"methodologies"   : [
 				"Agile"
 			]
@@ -97,7 +93,7 @@ module.exports = {
 					"location"   : "Columbus, OH",
 					"start"      : "March 2015",
 					"end"        : "Present",
-					"project"    : "LAS",
+					"project"    : "FDM",
 					"description": "Modern stack, test driven, agile structured project to store old information in a new way and produce multiple consumable endpoints for other internal applications. Java 8, MongoDB, Spring Data, Angular 1.4."
 				},
 				{
