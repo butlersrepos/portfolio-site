@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "git pull && forever stop mainServer.js &",
-    "deploy": "npm install && npm update && bower install --allow-root && gulp build:css",
+    "deploy": "npm install && npm update && bower install --allow-root && gulp deploy",
     "postdeploy": "forever start mainServer.js",
     "start": "node mainServer.js"
   },
@@ -14,6 +14,7 @@
     "ejs": "*",
     "errorhandler": "^1.3.5",
     "express": "^4.12.3",
+    "gulp-cssnano": "^2.0.0",
     "jade": "^1.9.2",
     "method-override": "^2.3.2",
     "moment": "~2.5.1",

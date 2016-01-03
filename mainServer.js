@@ -1,4 +1,3 @@
-/// <reference path="typings/node/node.d.ts"/>
 var express = require( 'express' );
 var routes = require( './routes/index' );
 var http = require( 'http' );
@@ -57,7 +56,7 @@ function runStartupTasks() {
 	global.repos_updated_last = new moment();
 	getGithubReposInfo();
 	getBitbucketReposInfo();
-};
+}
 
 function getBitbucketReposInfo() {
 	// Go get newest bitbucket info for Sarophym account
@@ -90,7 +89,7 @@ function getBitbucketPage( page ) {
 		console.log( "Bitbucket errored: " + e.message );
 	} );
 	bitbucketRequest.end();
-};
+}
 
 function getGithubReposInfo() {
 	var githubRequest = https.request( {
@@ -114,4 +113,4 @@ function getGithubReposInfo() {
 		console.log( "Github errored: " + e.message );
 	} );
 	githubRequest.end();
-};
+}

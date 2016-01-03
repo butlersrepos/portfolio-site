@@ -13,7 +13,7 @@ EB.SmoothMenu = {
 	attachEvents : function attachEvents() {
 		EB.SmoothMenu.menuCover.on( 'click', function( event ) {
 			$( '#top-navigation' ).toggleClass( 'inactive active' );
-		} )
+		} );
 
 		EB.SmoothMenu.menuOptions.on('click', function(event) {
 			$( '#top-navigation' ).toggleClass( 'inactive active' );

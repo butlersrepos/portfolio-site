@@ -38,4 +38,5 @@ gulp.task( 'devmode', ['build:css', 'build:js', 'nodemon'], function() {
 
 gulp.task( 'deploy', function() {
 	isProd = true;
+	gulp.start('inject:css');
 } );
