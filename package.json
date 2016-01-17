@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "predeploy": "git pull && forever stop mainServer.js &",
+    "predeploy": "git pull && forever stop portfolio-app.js &",
     "deploy": "npm install && npm update && bower install --allow-root && gulp deploy",
-    "postdeploy": "forever start app.js",
-    "start": "node mainServer.js"
+    "postdeploy": "forever start portfolio-app.js",
+    "start": "node portfolio-app.js"
   },
   "dependencies": {
     "body-parser": "^1.12.3",
