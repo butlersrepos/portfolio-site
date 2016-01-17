@@ -2,7 +2,7 @@ var gulp = require( 'gulp' );
 var browserSync = require( 'browser-sync' );
 var del = require( 'del' );
 var $ = require( 'gulp-load-plugins' )();
-require( 'require-dir' )( './gulp' );
+require( 'require-dir' )( './config' );
 
 BROWSER_SYNC_RELOAD_DELAY = 500;
 isProd = false;
