@@ -23,7 +23,7 @@ gulp.task('build:css', function() {
 		.pipe($.sourcemaps.init())
 		.pipe($.sass({errLogToConsole: true}))
 		.pipe($.sourcemaps.write())
-		.pipe($.if(!isProd, gulp.dest('./public/css')))
+		.pipe(gulp.dest('./public/css'))
 		.pipe($.concat('all.css'))
 		.pipe($.cssnano())
 		.pipe(gulp.dest(paths.sassBuild));
