@@ -1,0 +1,44 @@
+@import './colors';
+@import './material-design';
+@import './legalpad/legalpad';
+
+$vLine: #f1b587;
+$hLine: #9abc8a;
+
+* { box-sizing: border-box; }
+
+html {
+	background: $white;
+}
+
+v-line {
+	position: absolute;
+	left: 10vw;
+	border-left: 1px solid $vLine;
+	width: 1px;
+	height: 100%;
+
+	&:nth-of-type(2) {
+		left: 11vw;
+	}
+}
+
+body {
+	@include card(3);
+	position: relative;
+	margin: 2%;
+	background: #faf2ad;
+
+	header {
+		height: 15vw;
+	}
+}
+
+#new-student {
+	width: 30vw;
+}
+
+.new-student-inputs {
+	transition-property: width;
+	transition-duration: 1s;
+}

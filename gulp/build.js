@@ -5,8 +5,6 @@ var $ = require('gulp-load-plugins')();
 gulp.task('build:js', function() {
 	gulp.src(paths.js)
 		.pipe($.filter(['*.js', '!vendor.js']))
-		.pipe($.jshint())
-		.pipe($.jshint.reporter('jshint-stylish'))
 		.pipe($.concat('app.js'))
 		.pipe($.uglify())
 		.pipe(gulp.dest('./public/js'));

@@ -1,4 +1,20 @@
 html
 	head
+		link(href='/css/amys.css' rel='stylesheet')
 	body
-		div testing
+		script(src="/js/vendor.js")
+		script(src='/js/amys.js')
+		v-line
+		v-line
+		header
+		section.students
+		div.legalpad-line#student-entry-line
+			label.hidden First:
+			input.new-student-inputs#new-student-first-name.hidden
+			label.hidden Last:
+			input.new-student-inputs#new-student-last-name.hidden
+			button.legalpad-button.new-student-inputs.hidden#add-student(onclick="addStudent();") Add Student
+			button.legalpad-button#new-student(onclick="showNewStudentInputs();") New Student
+	template#new-student-template
+		div.legalpad-line
+			| {{ firstName }} {{ lastName }}

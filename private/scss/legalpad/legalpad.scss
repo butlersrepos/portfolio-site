@@ -1,0 +1,36 @@
+@import '../colors';
+
+$hLine: #9abc8a;
+
+.legalpad-line {
+	display: flex;
+	flex-direction: row;
+
+	border-bottom: 1px solid $hLine;
+	height: 8vh;
+	padding-left: 11vw;
+
+	&:nth-of-type(1) {
+		border-top: 1px solid $hLine;
+	}
+
+	.hidden {
+		width: 0 !important;
+		padding: 0 !important;
+		border: 0 !important;
+		overflow: hidden !important;
+	}
+}
+
+.legalpad-button {
+	border: 0;
+	background: $blue;
+	color: $white;
+	font-size: 1.5em;
+	font-weight: bold;
+	padding: .75em;
+
+	&:active {
+		background: $teal;
+	}
+}
