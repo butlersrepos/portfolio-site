@@ -92,17 +92,26 @@ module.exports = {
 			],
 			"projects" : [
 				{
+					"client": "The GAP",
+					"client_link": "http://www.gap.com",
+					"location"   : "Columbus, OH",
+					"start"      : "October 2015",
+					"end"        : "Present",
+					"project"    : "Ecommerce",
+					"description": "Legacy technology stack of Struts, Spring, JAWR, Grunt, Gulp, JSPs, Angular, DWR. This project was a ultra-long-lived mish-mash of design patterns and glue."
+				},
+				{
 					"client"     : "The GAP",
-					"client_link": "http://gap.com",
+					"client_link": "http://www.gap.com",
 					"location"   : "Columbus, OH",
 					"start"      : "March 2015",
-					"end"        : "Present",
+					"end"        : "October 2015",
 					"project"    : "LAS",
 					"description": "Modern stack, test driven, agile structured project to store old information in a new way and produce multiple consumable endpoints for other internal applications. Java 8, MongoDB, Spring Data, Angular 1.4."
 				},
 				{
 					"client"     : "DSW",
-					"client_link": "http://ww.dsw.com",
+					"client_link": "http://www.dsw.com",
 					"location"   : "Columbus, OH",
 					"start"      : "April 2014",
 					"end"        : "Present",
