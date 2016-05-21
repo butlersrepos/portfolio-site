@@ -13,7 +13,7 @@ app.engine( 'jade', engines.jade );
 app.engine( 'ejs', require('ejs').renderFile );
 
 // all environments
-app.set( 'port', 80 );
+app.set( 'port', 3000 );
 app.set( 'views', path.join( __dirname, 'views' ) );
 app.use( require( 'serve-favicon' )( __dirname + '/public/img/favicon.ico' ) );
 app.use( require( 'body-parser' ).json() );
