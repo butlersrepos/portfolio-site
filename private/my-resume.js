@@ -10,13 +10,13 @@ module.exports = {
 		"skills"      : {
 			"languages"       : [
 				"Java 1.5+",
-				"Javascript"
+				"Javascript Lover"
 			],
 			"web technologies": [
 				"HTML5 & CSS3",
-				"ES6 technologies",
-				"CSS Precompilers",
-				"Angular 1.x"
+				"ES6",
+				"SASS & LESS",
+				"Angular"
 			],
 			"versioning"      : [
 				"Git",
@@ -25,14 +25,6 @@ module.exports = {
 			"IDEs"            : [
 				"Eclipse",
 				"IntelliJ"
-			],
-			"servers"         : [
-				"Tomcat",
-				"JBoss"
-			],
-			"OSes"            : [
-				"Windows",
-				"Linux"
 			],
 			"methodologies"   : [
 				"Agile"
