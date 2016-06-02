@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predeploy": "git pull && forever stop mainServer.js &",
-    "deploy": "npm install && npm update && bower install --allow-root && gulp deploy",
+    "deploy": "npm install && bower install --allow-root && gulp deploy",
     "postdeploy": "forever start mainServer.js",
     "start": "node mainServer.js"
   },
