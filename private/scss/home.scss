@@ -3,17 +3,23 @@
 .permanent-nav {
 	cursor: pointer;
 	display: inline-block;
-}
-
-#top-navigation {
-}
-
-.permanent-nav {
-	background: $red;
+	background: $bluetwo;
 	border: 0.1em solid $silver;
 	font-size: 2em;
 	font-weight: bold;
 	padding: 4%;
 	text-align: center;
 	white-space: nowrap;
+
+	&:first-child {
+		border-left: none;
+	}
+
+	&:last-child {
+		border-right: none;
+	}
+}
+
+.nav-icons {
+	margin-left: .5rem;
 }

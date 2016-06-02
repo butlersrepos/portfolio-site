@@ -1,18 +1,18 @@
 @import "utils";
 @import "foundation/settings";
 
-
 #resume {
-	background: $silver;
+	background: #eee;
 }
 
 #resume-title {
-	background: $blue;
+	background: $bluethree;
+	color: $white;
 }
 
 #resume-title-name {
 	font-size: 1.75em;
-	line-height: 1.75em;
+	line-height: 1.5em;
 	vertical-align: middle;
 	font-weight: bold;
 	font-family: Century Gothic, Gothic, Verdana;
@@ -30,22 +30,29 @@
 	font-family: Century Gothic, Gothic, Verdana;
 	font-weight: bold;
 	margin-top: 1em;
-	text-decoration: underline;
 }
 
-.assignment-entry .resume-date-entry {
-	background: $gray;
-  	border-bottom: 2px solid black;
-  	border-right: 2px solid black;
-  	margin-top: 1.5em;
-}
+.assignment-entry {
+	background: $colorfive;
 
-.resume-date-entry {
-	.resume-event {
-		font-size: 1.5em;
-		font-weight: bold;
+	&:nth-child(2n) {
+		background: $colorfour;
 	}
 }
+
+.resume-event {
+	font-weight: bold;
+
+	a {
+		text-decoration: none;
+		color: $blueone;
+
+		&:visited {
+			color: $blueone;
+		}
+	}
+}
+
 
 .resume-event-date {
 	font-style: italic;

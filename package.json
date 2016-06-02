@@ -1,10 +1,11 @@
 {
   "name": "nodejs-portfolio-site",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
+    "build": "bower install --allow-root",
     "predeploy": "git pull && forever stop mainServer.js &",
-    "deploy": "npm install && bower install --allow-root && gulp deploy",
+    "deploy": "npm install && npm run build && gulp deploy",
     "postdeploy": "forever start mainServer.js",
     "start": "node mainServer.js"
   },

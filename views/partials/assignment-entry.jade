@@ -1,11 +1,9 @@
 div.assignment-entry
 	div.row.resume-date-entry
-		div.small-12.column.resume-event
+		div.small-8.column.resume-event
 			=	'Client: '
 			a(target='_blank', href=entry.client_link)= entry.client
 			= 	', ' + entry.location
-		div.small-8.column.resume-text
-			=	'Project: ' + entry.project
 		div.small-4.column.resume-event-date
 			=	entry.start + ' - ' + entry.end
 	div.resume-paragraph= entry.description

@@ -43,7 +43,7 @@ module.exports = {
 				{
 					"degree"     : "Master of Arts",
 					"major"      : "Economics",
-					"institution": "Bowling Green State University",
+					"institution": "BGSU",
 					"location"   : "Bowling Green, OH",
 					"grad_month" : "Aug",
 					"grad_year"  : 2009
@@ -51,7 +51,7 @@ module.exports = {
 				{
 					"degree"     : "Bachelor of Arts",
 					"major"      : "Philosophy & Economics",
-					"institution": "Bowling Green State University",
+					"institution": "BGSU",
 					"location"   : "Bowling Green, OH",
 					"grad_year"  : 2007,
 					"grad_month" : "Dec"

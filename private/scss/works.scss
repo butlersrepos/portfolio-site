@@ -2,7 +2,8 @@
 @import "foundation/settings";
 
 #works {
-	background: $blue;
+	background: $bluethree;
+	color: $white;
 	padding-bottom: 2em;
 
 	.repos-updated-last {
@@ -13,12 +14,12 @@
 
 	.repo-entry {
 		margin-bottom: .75em;
-		background: $red;
+		background: $colorfour;
         border-right: 2px solid $black;
         border-bottom: 2px solid $black;
 
 	  	&:nth-child(2n) {
-		  background: $gray;
+		  background: $colorfive;
 		}
 	}
 
@@ -35,6 +36,10 @@
 
 	.repo-column-headers {
 		text-align: center;
+	}
+
+	.repo-date {
+		color: $black;
 	}
 
 	@media #{$small-only} {

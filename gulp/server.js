@@ -29,7 +29,7 @@ gulp.task( 'browser-sync', ['nodemon'], function() {
 	browserSync.init( {
 		files  : ['./public/**/*.*'],
 		proxy  : 'http://localhost/',
-		port   : 8080,
+		port   : 3000,
 		browser: ['google chrome']
 	} );
 } );
