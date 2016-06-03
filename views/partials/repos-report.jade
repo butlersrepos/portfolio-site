@@ -7,7 +7,8 @@ div.row
 	- for( var i = 0; i < repos.length; i++ )
 		div.row.repo-entry
 			div.repo-name.small-12.medium-3.column
-				= repos[i].name
+				a(href= repos[i].html_url || repos[i].links.html.href)
+					= repos[i].name
 			div.repo-date.small-12.medium-2.column
 				span.hide-for-medium-up.repo-date-label Last Update:
 				- var date = repos[i].updated_at || repos[i].updated_on

@@ -24,9 +24,14 @@
 	}
 
 	.repo-name {
-		color: $black;
 		font-weight: bold;
 		padding-left: 4em;
+
+		a {
+			color: $colorone;
+			text-decoration: overline;
+			border-bottom: 1px solid #336699;
+		}
 	}
 
 	.repo-description {
