@@ -1,7 +1,7 @@
 @import "utils";
-@import "foundation/settings";
+@import "variables";
 
-@media #{$small-only} {
+@media (max-width: $probablyMobileMax) {
 	.menu-cover {
 		@include transition-property('max-height, padding, font-size');
 		@include transition-duration(.75s);

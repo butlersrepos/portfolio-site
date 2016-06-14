@@ -4,10 +4,10 @@ EB.SmoothMenu = {
 	parentElement: null,
 	menuOptions  : null,
 	menuCover    : null,
-	init         : function init( joParentNavEle ) {
-		EB.SmoothMenu.parentElement = joParentNavEle;
-		EB.SmoothMenu.menuCover = joParentNavEle.find( '.menu-cover' );
-		EB.SmoothMenu.menuOptions = joParentNavEle.find( '.menu-option' );
+	init         : function init( parentNavElement ) {
+		EB.SmoothMenu.parentElement = parentNavElement;
+		EB.SmoothMenu.menuCover = parentNavElement.find( '.menu-cover' );
+		EB.SmoothMenu.menuOptions = parentNavElement.find( '.menu-option' );
 		EB.SmoothMenu.attachEvents();
 	},
 	attachEvents : function attachEvents() {

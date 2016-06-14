@@ -1,4 +1,4 @@
-div#works.small-12.column
+#works
 	- var repoTitle = 'Github Projects'
 	- var repos = github_repos
 	include ../partials/repos-report
@@ -7,5 +7,5 @@ div#works.small-12.column
 	- repos = bitbucket_repos
 	include ../partials/repos-report
 
-div.medium-offset-7.medium-5.small-12.end.column.repo-updated-last
+.repo-updated-last
 	= 'Repos retrieved: ' + moment(updated_last).format("h:mma MMM Do, YYYY")

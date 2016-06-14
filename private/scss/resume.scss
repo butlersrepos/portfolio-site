@@ -1,12 +1,12 @@
 @import "utils";
-@import "foundation/settings";
+@import "variables";
 
 #resume {
 	background: #eee;
 }
 
 #resume-title {
-	background: $bluethree;
+	background: $colortwo;
 	color: $white;
 }
 
@@ -33,11 +33,7 @@
 }
 
 .assignment-entry {
-	background: $colorfive;
-
-	&:nth-child(2n) {
-		background: $colorfour;
-	}
+	margin-bottom: 2rem;
 }
 
 .resume-event {
@@ -45,10 +41,10 @@
 
 	a {
 		text-decoration: none;
-		color: $colorone;
+		color: $linkColor;
 
 		&:visited {
-			color: $colorone;
+			color: $linkColor;
 		}
 	}
 }
@@ -73,7 +69,7 @@
 	text-align: center;
 	margin: 0;
 
-	@media #{$small-only} {
+	@media (max-width: $probablyMobileMax){
 		margin-top: 1.5em;
 	}
 }
