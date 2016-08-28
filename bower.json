@@ -5,7 +5,7 @@
     "Eric Butler <ericbutler000@gmail.com>"
   ],
   "license": "Nobody but me!",
-  "homepage": "www.ericbutler.info",
+  "homepage": "ericbutler.info",
   "private": true,
   "ignore": [
     "**/.*",
@@ -17,6 +17,12 @@
   "dependencies": {
     "jquery": "1.8.3",
     "underscore": "~1.8.1",
-    "jquery.bbq": "~1.2.1"
+    "jquery.bbq": "~1.2.1",
+    "pure": "^0.6.0"
+  },
+  "overrides": {
+    "pure": {
+      "main": ["pure.css", "grids-responsive.css"]
+    }
   }
 }

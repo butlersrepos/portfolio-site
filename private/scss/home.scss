@@ -1,25 +1,137 @@
-@import "utils";
+@import './colors';
 
-.permanent-nav {
-	cursor: pointer;
-	display: inline-block;
-	background: $colorthree;
-	border: 0.1em solid $silver;
-	font-size: 2em;
-	font-weight: bold;
-	padding: 4%;
-	text-align: center;
-	white-space: nowrap;
+$homeIconStartLeft: 0;
+$homeIconStartTop: 0;
+$minBulge: 3rem;
+$maxBulge: 6rem;
+$orbitDuration: 5s;
 
-	&:first-child {
-		border-left: none;
-	}
-
-	&:last-child {
-		border-right: none;
-	}
+#main-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.nav-icons {
-	margin-left: .5rem;
+.home-icons {
+  position: relative;
+  font-size: 10vw;
+  top: $homeIconStartTop;
+  left: $homeIconStartLeft;
+  margin-bottom: 1.5rem;
+  margin-left: 1vw;
+
+  &:nth-child(1n) {
+    color: $colorone;
+  }
+
+  &:nth-child(2n) {
+    color: $colortwo;
+  }
+
+  &:nth-child(3n) {
+    color: $colorthree;
+  }
+
+  &:before {
+    vertical-align: top;
+  }
+
+  &:after {
+    display: inline-block;
+    content: attr(blurb);
+    font-size: 1.5rem;
+    font-family: sans-serif, arial;
+    color: #111;
+    overflow: hidden;
+    margin-left: 2vw;
+    filter: blur(10px);
+
+    transition: filter 1s ease;
+    width: 0;
+    height: 0;
+  }
+
+  &:hover {
+    &:after {
+      padding: .5vw 1vw;
+      border: 2px solid #CCC;
+      border-radius: .5rem;
+      background: white;
+      filter: blur(0px);
+
+      width: 83vw;
+      height: auto;
+      max-height: 20vw;
+    }
+  }
+}
+
+.fa-steam {
+  color: $black;
+}
+
+@keyframes popup {
+  from {
+  }
+  to {
+    top: 67vh;
+  }
+}
+
+.gear-box {
+  position: absolute;
+  left: 50vw;
+  top: 50vh;
+
+  .first,
+  .second,
+  .third {
+    position: absolute;
+  }
+
+  .first {
+    color: $colorone;
+    left: -1rem;
+    top: -1rem;
+  }
+
+  .second {
+    color: $colortwo;
+    left: -1rem;
+    top: 1rem;
+  }
+
+  .third {
+    color: $colorthree;
+    left: .25rem
+  }
+}
+
+@keyframes bulgeAndCircle {
+  0% {
+    font-size: $minBulge;
+    top: $homeIconStartTop;
+    left: $homeIconStartLeft;
+  }
+
+  25% {
+    top: 50vh;
+    left: 60vw;
+  }
+
+  50% {
+    font-size: $maxBulge;
+    top: 60vh;
+    left: 50vw;
+  }
+
+  75% {
+    top: 50vh;
+    left: 30vw;
+  }
+
+  100% {
+    font-size: $minBulge;
+    top: $homeIconStartTop;
+    left: $homeIconStartLeft;
+  }
 }

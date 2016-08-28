@@ -2,74 +2,81 @@
 @import "variables";
 
 #resume {
-	background: #eee;
-}
+  background: #eee;
 
-#resume-title {
-	background: $colortwo;
-	color: $white;
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem .5rem;
+    font-size: 3vw;
+    background: $colortwo;
+    color: $white;
+  }
 }
 
 #resume-title-name {
-	font-size: 1.75em;
-	line-height: 1.5em;
-	vertical-align: middle;
-	font-weight: bold;
-	font-family: Century Gothic, Gothic, Verdana;
+  font-size: 1.75em;
+  line-height: 1.5em;
+  vertical-align: middle;
+  font-weight: bold;
+  font-family: Century Gothic, Gothic, Verdana;
 }
 
 #resume-title-info {
-	text-align: right;
+  text-align: right;
 
-	.address-line {
-		font-weight: bold;
-	}
+  .address-line {
+    font-weight: bold;
+  }
 }
 
 .resume-header {
-	font-family: Century Gothic, Gothic, Verdana;
-	font-weight: bold;
-	margin-top: 1em;
+  font-family: Century Gothic, Gothic, Verdana;
+  font-weight: bold;
+  margin-top: 1em;
 }
 
 .assignment-entry {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .resume-event {
-	font-weight: bold;
+  font-weight: bold;
 
-	a {
-		text-decoration: none;
-		color: $linkColor;
+  a {
+    text-decoration: none;
+    color: $linkColor;
 
-		&:visited {
-			color: $linkColor;
-		}
-	}
+    &:visited {
+      color: $linkColor;
+    }
+  }
 }
 
+.resume-date-entry {
+  margin-left: 2em;
+}
 
 .resume-event-date {
-	font-style: italic;
+  font-style: italic;
 }
 
 #employers {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .resume-paragraph {
-	text-indent: 2em;
+  text-indent: 2em;
 }
 
 #skills-title {
-	background: $black;
-	color: $silver;
-	font-weight: bold;
-	text-align: center;
-	margin: 0;
+  background: $black;
+  color: $silver;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 
-	@media (max-width: $probablyMobileMax){
-		margin-top: 1.5em;
-	}
+  @media (max-width: $probablyMobileMax) {
+    margin-top: 1.5em;
+  }
 }

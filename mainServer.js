@@ -31,7 +31,8 @@ if ('development' == app.get('env')) {
 /////////////////////
 app.use('/', routes);
 
-var bitbucketAuth = 'Basic U2Fyb3BoeW06a3B4bGlsb3RhY29uMTAzNA==';
+// To replace this! `echo -n "username:password" | base64`
+var bitbucketAuth = 'Basic ZXJpY2J1dGxlcjAwMEBnbWFpbC5jb206MXdkdlpEVCY=';
 var repoUpdateInHours = 12;
 
 // Startup Server!app
@@ -67,7 +68,7 @@ function getBitbucketPage(page) {
 	var opts = {
 		host: "bitbucket.org",
 		method: 'GET',
-		path: "/api/2.0/repositories/Sarophym?page=" + page,
+		path: "/api/2.0/repositories/sarophym?page=" + page,
 		headers: {
 			Authorization: bitbucketAuth
 		}

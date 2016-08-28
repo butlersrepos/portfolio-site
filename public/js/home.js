@@ -36,7 +36,6 @@ $( document ).ready( function() {
 	EB.Home.bindNavbarButtons();
 	EB.Home.setupGoogleAnalytics();
 	EB.PageTransitions.setupHashEvent();
-	EB.SmoothMenu.init( $( '#top-navigation' ) );
 } );
 
 

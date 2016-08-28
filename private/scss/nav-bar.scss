@@ -1,0 +1,34 @@
+@import "utils";
+@import "variables";
+
+.permanent-nav {
+  cursor: pointer;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: $colorthree;
+  border: 0.1em solid #ddd;
+  font-size: 5.5vmin;
+  font-weight: bold;
+  white-space: nowrap;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  .nav-icons {
+    margin-left: .5rem;
+  }
+}
+
+.menu-option {
+  @include transition-property('max-height, padding, font-size');
+  @include transition-duration(.5s);
+  @include transition-timing(cubic-bezier(0.68, -0.55, 0.265, 1.55));
+}
+

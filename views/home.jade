@@ -4,12 +4,16 @@ html
         title Eric Butler
         meta(content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no', name='viewport')
         //- inject:css
+        link(rel="stylesheet", href="/css/pure.css")
         link(rel="stylesheet", href="/css/aboutme.css")
+        link(rel="stylesheet", href="/css/baseline.css")
         link(rel="stylesheet", href="/css/font-awesome.css")
+        link(rel="stylesheet", href="/css/grids-responsive.css")
+        link(rel="stylesheet", href="/css/grids.css")
         link(rel="stylesheet", href="/css/home.css")
+        link(rel="stylesheet", href="/css/nav-bar.css")
         link(rel="stylesheet", href="/css/normalize.css")
         link(rel="stylesheet", href="/css/resume.css")
-        link(rel="stylesheet", href="/css/smooth-menu.css")
         link(rel="stylesheet", href="/css/works.css")
         //- endinject
         link(rel='shortcut icon', href='img/favicon.ico')
@@ -17,21 +21,32 @@ html
         script(src="/js/vendor.js")
         script(src="/js/home.js")
         script(src="/js/page-transitions.js")
-        script(src="/js/smooth-menu.js")
         //- endinject
     body
-        #top-navigation.inactive
-            .permanent-nav.menu-cover.js-menu-cover
-                | MENU
-                i.nav-icons.fa.fa-list
-            span
-                #about-me-nav.permanent-nav.menu-option.js-about-me-nav
-                    | About Me
-                    i.nav-icons.fa.fa-info-circle
-                #resume-nav.permanent-nav.menu-option.js-resume-nav
-                    | Resum&eacute;
-                    i.nav-icons.fa.fa-file-text
-                #work-nav.permanent-nav.menu-option.js-works-nav
-                    | Works
-                    i.nav-icons.fa.fa-folder-open
-        #main-content
+        header#top-navigation
+            #about-me-nav.permanent-nav.menu-option.js-about-me-nav.pure-u-1-3
+                | About Me
+                i.nav-icons.fa.fa-info-circle
+            #resume-nav.permanent-nav.menu-option.js-resume-nav.pure-u-1-3
+                | Resum&eacute;
+                i.nav-icons.fa.fa-file-text
+            #work-nav.permanent-nav.menu-option.js-works-nav.pure-u-1-3
+                | Works
+                i.nav-icons.fa.fa-folder-open
+        main#main-content
+            i.fa.fa-android.fa-2x.home-icons(blurb="Building mobile apps for Android via Cordova is a great way to leverage my javascript skills to reach more users")
+            i.fa.fa-html5.fa-2x.home-icons(blurb="The new web is full of smart semantics and flexible components. I prefer building on top of it instead of starting with a heavy framework")
+            i.fa.fa-css3.fa-2x.home-icons(blurb="With CSS3 and Sass the presentation layer logic is smarter, faster, and very fun to work with. This entire interaction is powered by CSS")
+            i.fa.fa-trello.fa-2x.home-icons(blurb="Whether for work or personal projects I like organizing all manner of aspects of my life in boards as a practice in planning")
+            i.fa.fa-slack.fa-2x.home-icons(blurb="Being in easily reached communication with coworkers, friends, and ex-colleagues is important to me and Slack is how I prefer to do it")
+            i.fa.fa-steam.fa-2x.home-icons(blurb="When I'm not at work I enjoy gaming with coworkers and friends")
+            i.fa.fa-github.fa-2x.home-icons(blurb="I use and endorse open source software solutions")
+            i.fa.fa-beer.fa-2x.home-icons(blurb="Porters, stouts, wheat ales, hefeweizens, whiskeys, finding new flavors or local brews is always a fun time")
+            i.fa.fa-gamepad.fa-2x.home-icons(blurb="Gaming has been a life long indulgence and most likely contributed greatly towards me finding a career in development")
+            //span.gear-box
+            //    i.fa.fa-gear.fa-2x.first
+            //    i.fa.fa-gear.fa-2x.second
+            //    i.fa.fa-gear.fa-2x.third
+         footer
+            a.permanent-nav.pure-1-3 ericbutler.info
+                i.nav-icons.fa.fa-home
