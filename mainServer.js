@@ -15,11 +15,11 @@ app.engine('ejs', require('ejs').renderFile);
 // all environments
 app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
-app.use(require('serve-favicon')(__dirname + '/public/img/favicon.ico'));
+app.use(require('serve-favicon')(__dirname + '/dist/imgs/favicon.ico'));
 app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({extended: false}));
 app.use(require('morgan')('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // development only
 if ('development' == app.get('env')) {

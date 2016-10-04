@@ -1,33 +1,38 @@
 // Moment plugin for time and date parsing
 var moment = require( 'moment' );
-var resumeJson = require( '../private/my-resume' );
+var resumeJson = require( './my-resume' );
 var express = require( 'express' );
 var router = express.Router();
 
 // Main Start Page
-function homePage( req, res ) {
+function mainPage(req, res ) {
 	console.log( 'Starting!' );
-	res.render( 'home.jade' );
+	res.render( 'index.jade' );
 	console.log( req.host )
-};
+}
+
+function homePage(req, res) {
+	console.log( 'Starting!' );
+	res.render( 'content/home.jade' );
+}
 
 // A Short AJAXed Autobiography
 function aboutMePage( req, res ) {
 	console.log( 'Loading AboutMe...' );
 	res.render( 'content/aboutme.jade' );
-};
+}
 
 // An AJAXed Resume
 function resumePage( req, res ) {
 	console.log( 'Loading Resume...' );
 	res.render( 'content/resume.jade', { resume: resumeJson } );
-};
+}
 
 // RESTful API Stuff
 function getJsonResume( req, res ) {
 	res.writeHead( 200, { "Content-Type": "application/json" } );
 	res.end( JSON.stringify( resumeJson ) );
-};
+}
 
 // List of github repos etc
 function worksPage( req, res ) {
@@ -37,9 +42,10 @@ function worksPage( req, res ) {
 		github_repos   : global.github_repos,
 		bitbucket_repos: global.bitbucket_repos
 	} );
-};
+}
 
-router.get( '/', homePage );
+router.get( '/', mainPage );
+router.get( '/home', homePage );
 router.get( '/aboutme', aboutMePage );
 router.get( '/resume', resumePage );
 router.get( '/works', worksPage );

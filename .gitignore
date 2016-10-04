@@ -1,6 +1,7 @@
-.idea
-node_modules
-bower_components
-public/css
-public/js/app.js
-typings
+.idea/
+.settings/
+node_modules/
+bower_components/
+typings/
+dist/
+.editorconfig
