@@ -2,61 +2,65 @@
 @import "variables";
 
 #works {
-	background: $colortwo;
-	color: $white;
-	padding-bottom: 2em;
+  background: $white;
+  color: $black;
+  padding-bottom: 2em;
 
-	.repos-updated-last {
-		text-align: right;
-		font-size: 0.75em;
-		margin-top: 2em;
-	}
+  .repos-updated-last {
+    text-align: right;
+    font-size: 0.75em;
+    margin-top: 2em;
+  }
 
-	.repo-entry {
-		margin-bottom: .75em;
-		background: $colorthree;
-        border-right: 2px solid $black;
-        border-bottom: 2px solid $black;
+  .repo-entry {
+    margin: 1.5rem;
+    padding: .5rem;
+    background: $colorthree;
+    border-right: 2px solid $black;
+    border-bottom: 2px solid $black;
 
-	  	&:nth-child(2n) {
-		  background: $colorfour;
-		}
-	}
+    &:nth-child(2n) {
+      background: $colorfour;
+    }
+  }
 
-	.repo-name {
-		font-weight: bold;
-		padding-left: 4em;
+  .repo-name {
+    font-weight: bold;
+    text-indent: 5vw;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    text-decoration: underline;
 
-		a {
-			color: $linkColor;
-			text-decoration: none;
-		}
-	}
+    a {
+      color: $linkColor;
+      text-decoration: none;
+    }
+  }
 
-	.repo-description {
-		color: $navy;
-		font-style: italic;
-	}
+  .repo-description {
+    color: $navy;
+    font-style: italic;
+  }
 
-	.repo-column-headers {
-		text-align: center;
-	}
+  .repo-column-headers {
+    text-align: center;
+  }
 
-	.repo-date {
-		color: $black;
-	}
+  .repo-date {
+    color: $black;
+  }
 
-	@media (max-width: $probablyMobileMax) {
-		.repo-name {
-			padding-left: 1.5em;
-		}
+  @media (max-width: $probablyMobileMax) {
+    .repo-name {
+      padding-left: 1.5em;
+    }
 
-		.repo-description, .repo-date {
-			padding-left: 2.5em;
-		}
+    .repo-description, .repo-date {
+      padding-left: 2.5em;
+    }
 
-		.repo-date-label {
-			display: inline;
-		}
-	}
+    .repo-date-label {
+      display: inline;
+    }
+  }
 }

@@ -2,6 +2,7 @@ import HistoryNavigation from './history-navigation';
 import NavBar from './nav-bar';
 import $ from 'jquery';
 import _ from 'lodash';
+
 window.$ = $;
 window._ = _;
 
