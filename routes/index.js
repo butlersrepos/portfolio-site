@@ -1,8 +1,16 @@
-// Moment plugin for time and date parsing
 var moment = require('moment');
 var resumeJson = require('../src/my-resume');
 var express = require('express');
 var router = express.Router();
+
+router.get('/', mainPage);
+router.get('/home', homePage);
+router.get('/aboutme', aboutMePage);
+router.get('/resume', resumePage);
+router.get('/works', worksPage);
+router.get('/api/resume/get', getJsonResume);
+
+module.exports = router;
 
 // Main Start Page
 function mainPage(req, res) {
@@ -43,13 +51,3 @@ function worksPage(req, res) {
     bitbucket_repos: global.bitbucket_repos
   });
 }
-
-router.get('/', mainPage);
-router.get('/home', homePage);
-router.get('/aboutme', aboutMePage);
-router.get('/resume', resumePage);
-router.get('/works', worksPage);
-router.get('/api/resume/get', getJsonResume);
-
-// Exposed pieces
-module.exports = router;

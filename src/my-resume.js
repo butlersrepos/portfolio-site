@@ -16,7 +16,10 @@ module.exports = {
 				"HTML5 & CSS3",
 				"ES6",
 				"SASS & LESS",
-				"Angular"
+				"Angular",
+				"RiotJS",
+				"Web Components",
+				"All the build tools"
 			],
 			"versioning"      : [
 				"Git",
@@ -24,10 +27,11 @@ module.exports = {
 			],
 			"IDEs"            : [
 				"Eclipse",
-				"IntelliJ"
+				"IntelliJ",
+				"VS Code"
 			],
 			"methodologies"   : [
-				"Agile"
+				"agile"
 			]
 		},
 		"hobbies"   : [

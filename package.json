@@ -1,6 +1,6 @@
 {
   "name": "nodejs-portfolio-site",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "body-parser": "^1.12.3",
@@ -16,6 +16,8 @@
     "moment": "~2.5.1",
     "morgan": "^1.5.2",
     "node-sass": "~3.10.1",
+    "riot": "^2.6.4",
+    "rollup-plugin-riot": "^0.4.3",
     "serve-favicon": "^2.2.0"
   },
   "devDependencies": {
@@ -30,6 +32,7 @@
     "rollup": "^0.34.10",
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^2.5.0",
     "stream-series": "^0.1.1"
   },
   "scripts": {
@@ -44,6 +47,7 @@
     "start": "npm run build && node mainServer.js",
     "server": "nodemon mainServer.js --watch mainServer.js --watch views/ --watch routes/",
     "dev": "npm run build && npm run server & sleep 2 && browser-sync start --proxy 'http://localhost:3000' --port 3001 --files 'dist/**/*.*'",
-    "watch-css": "node-sass src/scss/bundled.scss --output dist/css --watch"
+    "watch-css": "node-sass src/scss/bundled.scss --output dist/css --watch",
+    "watch-js": "rollup --config rollup.config.js --watch"
   }
 }
