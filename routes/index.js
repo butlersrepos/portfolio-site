@@ -9,6 +9,9 @@ router.get('/aboutme', aboutMePage);
 router.get('/resume', resumePage);
 router.get('/works', worksPage);
 router.get('/api/resume/get', getJsonResume);
+router.get('/api/githubs', getGithubs);
+router.get('/api/bitbuckets', getBitbuckets);
+router.get('/api/repos/lastupdate', getLastRepoUpdateTime);
 
 module.exports = router;
 
@@ -50,4 +53,18 @@ function worksPage(req, res) {
     github_repos: global.github_repos,
     bitbucket_repos: global.bitbucket_repos
   });
+}
+
+function getGithubs(req, res) {
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.end(JSON.stringify(global.github_repos));
+}
+
+function getBitbuckets() {
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.end(JSON.stringify(global.bitbucket_repos));
+}
+
+function getLastRepoUpdateTime(req, res) {
+  res.end(JSON.stringify(global.repos_updated_last));
 }

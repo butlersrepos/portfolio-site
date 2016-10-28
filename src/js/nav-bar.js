@@ -1,14 +1,4 @@
-import HistoryNavigation from './history-navigation';
-
 export default {
-  bindNavbarButtons: function bindNavbarButtons() {
-    $('.permanent-nav').off('click')
-      .on('click', function() {
-        let url = $(this).data('url');
-        history.pushState({page: url}, '', url);
-        HistoryNavigation.goToPage(url);
-      });
-  },
   setupGoogleAnalytics: function setupGoogleAnalytics() {
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;

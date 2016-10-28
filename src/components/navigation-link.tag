@@ -1,4 +1,4 @@
-navigation-link
+navigation-link(onclick="{ doNavigate }")
     #about-me-nav.permanent-nav.menu-option.js-about-me-nav(data-url="{ url }")
         | { description }
         i(class="nav-icons fa fa-{ icon }")
@@ -8,6 +8,11 @@ navigation-link
         this.url = this.opts.url;
         this.icon = this.opts.icon;
     
+        doNavigate() {
+            console.log('NAV CLIKT: ' + this.url);
+            riot.route(this.url);
+        }
+
     style(scoped="scoped").
         @import 'src/scss/_colors.scss';
         :scope {
