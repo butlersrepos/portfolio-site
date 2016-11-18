@@ -10,7 +10,6 @@ navigation-bar
             top: 0;
             left: 0;
             height: 10vh;
-            box-shadow: 0px 5px 20px #bbb;
             display: flex;
             align-items: stretch;
         }

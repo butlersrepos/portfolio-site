@@ -1,28 +1,31 @@
 @import 'variables';
 
 html {
-  background: $siteBackground;
+	background: $siteBackground;
+	color: $textColor;
 
-  main,
-  #bottom-navigation {
-    width: 100vw;
-  }
+	main,
+	#bottom-navigation {
+		width: 100vw;
+	}
 
-  main {
-    position: absolute;
-    top: 10vh;
-    height: 80vh;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+	main {
+		position: absolute;
+		font-size: 3.5vmin;
+		top: 10vh;
+		height: 80vh;
+		width: 100vw;
+		padding: 1em;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 
-  footer {
-    position: absolute;
-    top: 90vh;
-    height: 10vh;
-    width: 100vw;
-    background: #ddd;
-    box-shadow: 0px -5px 20px #bbb;
-  }
+	footer {
+		position: absolute;
+		top: 90vh;
+		height: 10vh;
+		width: 100vw;
+		background: #ddd;
+		box-shadow: 0px -5px 20px #bbb;
+	}
 }
