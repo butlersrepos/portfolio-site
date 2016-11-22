@@ -1,32 +1,33 @@
 doctype html
 html
-    head
-        title Eric Butler
-        meta(content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no', name='viewport')
-        link(rel="stylesheet", href="/css/bundled.css")
-        link(rel='shortcut icon', href='imgs/favicon.ico')
-        script(src="/js/bundled.js")
-    body
-        navigation-bar
-        main#main-content
-        footer
-            a.permanent-nav.pure-1-3(data-url='home')
-            | ericbutler.info
-            i.nav-icons.fa.fa-home
-        script.
-            riot.route('aboutme', function() {
-                console.log('ROUTING');
-                riot.mount('#main-content', 'about-me');
-            });
+	head
+		title Eric Butler
+		meta(content='width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no', name='viewport')
+		link(rel="stylesheet", href="/css/bundled.css")
+		link(rel='shortcut icon', href='imgs/favicon.ico')
+		script(src="/js/bundled.js")
+	body
+		navigation-bar
+		main#main-content
+		floating-hamburger
+		footer
+			a.permanent-nav.pure-1-3(data-url='home')
+			| ericbutler.info
+			i.nav-icons.fa.fa-home
+		script.
+			riot.route('aboutme', function() {
+				console.log('ROUTING');
+				riot.mount('#main-content', 'about-me');
+			});
 
-            riot.route('resume', function() {
-                $.ajax('/api/resume/get').then(function(resume) {
-                    riot.mount('#main-content', 'resume', resume);
-                });
-            });
+			riot.route('resume', function() {
+				$.ajax('/api/resume/get').then(function(resume) {
+					riot.mount('#main-content', 'resume', resume);
+				});
+			});
 
-            riot.route('works', function() {
-                riot.mount('#main-content', 'works-page');
-            });
+			riot.route('works', function() {
+				riot.mount('#main-content', 'works-page');
+			});
 
-            riot.route.start(true);
+			riot.route.start(true);

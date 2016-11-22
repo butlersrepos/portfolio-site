@@ -46,7 +46,8 @@
     "postdeploy": "forever start mainServer.js",
     "start": "npm run build && node mainServer.js",
     "server": "nodemon mainServer.js --watch mainServer.js --watch views/ --watch routes/",
-    "dev": "npm run build && npm run server & sleep 2 && browser-sync start --proxy 'http://localhost:3000' --port 3001 --files 'dist/**/*.*'",
+	"browser-sync": "browser-sync start --config bs-config.js",
+    "dev": "npm-run-all build && npm-run-all --parallel server browser-sync watch-css watch-js",
     "watch-css": "node-sass src/scss/bundled.scss --output dist/css --watch",
     "watch-js": "rollup --config rollup.config.js --watch"
   }

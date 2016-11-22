@@ -16,7 +16,7 @@ import '../components/employer-entry.tag';
 import '../components/assignment-entry.tag';
 import '../components/works-page.tag';
 import '../components/repo-report.tag';
-
+import '../components/floating-hamburger.tag';
 
 $(document).ready(function() {
   NavBar.setupGoogleAnalytics();
