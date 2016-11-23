@@ -18,7 +18,7 @@ module.exports = router;
 // Main Start Page
 function mainPage(req, res) {
   console.log('Starting!');
-  res.render('index.jade');
+  res.sendFile('index.html');
   console.log(req.host)
 }
 
@@ -60,7 +60,7 @@ function getGithubs(req, res) {
   res.end(JSON.stringify(global.github_repos));
 }
 
-function getBitbuckets() {
+function getBitbuckets(req, res) {
   res.writeHead(200, {"Content-Type": "application/json"});
   res.end(JSON.stringify(global.bitbucket_repos));
 }

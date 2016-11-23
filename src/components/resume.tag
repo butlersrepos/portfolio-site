@@ -1,21 +1,22 @@
-resume
-	header#resume-title
-		#resume-title-name
-			| { resume.firstname } { resume.lastname }
-		#resume-title-info
-			.address-line
-				| { resume.bio_data.location }
-			.address-line
-				| { resume.bio_data.email }
-			.address-line
-				| { resume.bio_data.phone }
-	section#resume-body
-		#resume-body-left
-			.resume-header EDUCATION
-				education-entry(each="{ resume.bio_data.education.schools }")
-			#experience-title.resume-header EXPERIENCE
-			#employers
-				employer-entry(each="{ resume.bio_data.experience.positions }")
-
-	script.
-		this.resume = this.opts;
+<resume>
+	<header id="resume-title">
+		<div id="resume-title-name">{ resume.firstname } { resume.lastname }</div>
+		<div id="resume-title-info">
+			<div class="address-line">{ resume.bio_data.location }</div>
+			<div class="address-line">{ resume.bio_data.email }</div>
+			<div class="address-line">{ resume.bio_data.phone }</div>
+		</div>
+	</header>
+	<section id="resume-body">
+		<div id="resume-body-left">
+			<div class="resume-header">EDUCATION
+				<education-entry each="{ resume.bio_data.education.schools }"></education-entry>
+			</div>
+			<div id="experience-title" class="resume-header">EXPERIENCE</div>
+			<div id="employers">
+				<employer-entry each="{ resume.bio_data.experience.positions }"></employer-entry>
+			</div>
+		</div>
+	</section>
+	<script>this.resume = this.opts;</script>
+</resume>

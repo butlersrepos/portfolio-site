@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Eric Butler</title>
+	<meta content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="/css/bundled.css">
+	<link rel="shortcut icon" href="imgs/favicon.ico">
+	<script src="/js/bundled.js"></script>
+  </head>
+  <body>
+	<navigation-bar></navigation-bar>
+	<main></main>
+	<floating-hamburger></floating-hamburger>
+	<footer><a data-url="home" class="permanent-nav pure-1-3"></a>ericbutler.info<i class="nav-icons fa fa-home"></i></footer>
+	<script>
+	  riot.route('aboutme', function() {
+			console.log('ROUTING');
+	  	riot.mount('main', 'about-me');
+	  });
+	  riot.route('resume', function() {
+	  	$.ajax('/api/resume/get').then(function(resume) {
+	  		riot.mount('main', 'resume', resume);
+	  	});
+	  });
+	  riot.route('works', function() {
+	  	riot.mount('main', 'works-page');
+	  });
+	  riot.route.start(true);
+	</script>
+  </body>
+</html>Ï

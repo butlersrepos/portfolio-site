@@ -1,14 +1,12 @@
-floating-hamburger
-	i.fa.fa-bars(onclick="{ openMenu }")
-
-	script.
-		openMenu() {
-			console.log('opening hamburger')
-		}
-
-	style(scoped).
+<floating-hamburger><i onclick="{ openMenu }" class="fa fa-bars"></i>
+	<script>
+    openMenu() {
+    	console.log('opening hamburger')
+    }
+  </script>
+	<style scoped="scoped">
 		@import 'src/scss/_variables.scss';
-
+		
 		:scope {
 			width: 12vw;
 			height: 12vw;
@@ -19,17 +17,16 @@ floating-hamburger
 			background: $colorthree;
 			border-radius: 40%;
 			text-align: center;
-
 			i.fa-bars {
-				font-size: 10vw;					
+				font-size: 10vw;
 			}
-
 			@media all and (min-width: 1024px) {
 				width: 6vw;
 				height: 6vw;
-
 				i.fa-bars {
 					font-size: 4vw;
 				}
 			}
 		}
+	</style>
+</floating-hamburger>

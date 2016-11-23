@@ -1,5 +1,5 @@
 
-import NavBar from './nav-bar';
+import ga from './google-analytics';
 import $ from 'jquery';
 window.$ = $;
 import _ from 'lodash';
@@ -15,12 +15,12 @@ import '../components/education-entry.tag';
 import '../components/employer-entry.tag';
 import '../components/assignment-entry.tag';
 import '../components/works-page.tag';
-import '../components/repo-report.tag';
+import '../components/github-repo.tag';
+import '../components/bitbucket-repo.tag';
 import '../components/floating-hamburger.tag';
 
 $(document).ready(function() {
-  NavBar.setupGoogleAnalytics();
-
+  ga.init();
   riot.mount('*');
 });
 

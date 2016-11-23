@@ -7,7 +7,6 @@ export default {
   dest: 'dist/js/bundled.js',
   plugins: [
     riot({
-      template: 'jade',
       style: 'scss'
     }),
     commonJs(),

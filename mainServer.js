@@ -4,13 +4,9 @@ var http = require('http');
 var https = require('https');
 var path = require('path');
 var moment = require('moment');
-var engines = require('consolidate');
 
 // Setup EJS wit handlebars like syntax
 var app = express();
-
-app.engine('jade', engines.jade);
-app.engine('ejs', require('ejs').renderFile);
 
 // all environments
 app.set('port', 3000);
@@ -20,6 +16,7 @@ app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({extended: false}));
 app.use(require('morgan')('dev'));
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'views')));
 
 // development only
 if ('development' == app.get('env')) {
