@@ -18,5 +18,32 @@
 			</div>
 		</div>
 	</section>
+
 	<script>this.resume = this.opts;</script>
+
+	<style scoped>
+		:scope {
+			#resume-title-name {
+				font-size: 1.75em;
+				line-height: 1.5em;
+				vertical-align: middle;
+				font-weight: bold;
+				font-family: Century Gothic, Gothic, Verdana;
+			}
+
+			#resume-title-info {
+				text-align: right;
+
+				.address-line {
+					font-weight: bold;
+				}
+			}
+
+			.resume-header {
+				font-family: Century Gothic, Gothic, Verdana;
+				font-weight: bold;
+				margin-top: 1em;
+			}
+		}
+	</style>
 </resume>
