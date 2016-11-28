@@ -8,6 +8,7 @@
 		@import 'src/scss/_variables.scss';
 		
 		:scope {
+			@include card(2);
 			width: 12vw;
 			height: 12vw;
 			position: absolute;
@@ -17,9 +18,12 @@
 			background: $colorthree;
 			border-radius: 40%;
 			text-align: center;
+			
 			i.fa-bars {
 				font-size: 10vw;
+				color: $black;
 			}
+
 			@media all and (min-width: 1024px) {
 				width: 6vw;
 				height: 6vw;

@@ -24,26 +24,37 @@
 		}
     </script>
 
-	<style scoped>
+	<style scoped type="scss">
 		@import 'src/scss/variables';
 		:scope {
 			.repo-entry {
 				position: relative;
 				margin-bottom: 1em;
 			}
+
 			.repo-name {
+				@include card(2);
 				font-weight: bold;
 				font-size: 1.25em;
+				color: black;
+				background: $colorthree;
+				display: inline-block;
+				padding: 0 1em;
+				border-radius: 7px;
+
 				a,
 				a:visited {
 					color: inherit;
 					cursor: pointer;
+					text-decoration: none;
 				}
 			}
+
 			.repo-description {
 				font-style: italic;
 				font-size: .75em;
 			}
+			
 			.repo-symbol {
 				position: absolute;
 				right: 0;
