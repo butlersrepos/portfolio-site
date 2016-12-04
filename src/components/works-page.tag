@@ -1,8 +1,8 @@
 <works-page id="works">
+	<div class="repo-updated-last">Repos last retrieved: <span class="timestamp">{ moment(updated_last).format("h:mma MMM Do, YYYY") }</span></div>
 	<github-repo name="githubs" repos="{ github_repos }"></github-repo>
 	<bitbucket-repo name="bitbuckets" repos="{ bitbucket_repos }"></bitbucket-repo>
-	<div class="repo-updated-last">Repos retrieved: { moment(updated_last).format("h:mma MMM Do, YYYY") }</div>
-
+	
 	<script>
         this.on('mount', () => {
            this.updateGithubRepos();
@@ -27,6 +27,13 @@
 	<style scoped type="scss">
 		@import 'src/scss/variables';
 		:scope {
+			.repo-updated-last {
+				.timestamp {
+					border: 3px solid #eee;
+    				padding: 0 .25em;
+				}
+			}
+			
 			.repo-entry {
 				position: relative;
 				margin-bottom: 1em;

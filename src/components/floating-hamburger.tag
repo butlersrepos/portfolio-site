@@ -19,6 +19,10 @@
 			border-radius: 40%;
 			text-align: center;
 			
+			&:hover {
+				background: green;
+			}
+
 			i.fa-bars {
 				font-size: 10vw;
 				color: $black;
