@@ -8,23 +8,22 @@
 	<script src="/js/bundled.js"></script>
   </head>
   <body>
-	<navigation-bar></navigation-bar>
 	<main></main>
 	<floating-hamburger></floating-hamburger>
 	<script>
-	  riot.route('aboutme', function() {
+	  route('aboutme', function() {
 			console.log('ROUTING');
 	  	riot.mount('main', 'about-me');
 	  });
-	  riot.route('resume', function() {
+	  route('resume', function() {
 	  	$.ajax('/api/resume/get').then(function(resume) {
 	  		riot.mount('main', 'resume', resume);
 	  	});
 	  });
-	  riot.route('works', function() {
+	  route('works', function() {
 	  	riot.mount('main', 'works-page');
 	  });
-	  riot.route.start(true);
+	  route.start(true);
 	</script>
   </body>
 </html>

@@ -1,9 +1,17 @@
-<floating-hamburger><i onclick="{ openMenu }" class="fa fa-bars"></i>
+<floating-hamburger>
+	<navigation-menu ref="menu"></navigation-menu>
+	<i if={ !open } onclick="{ openMenu }" class="fa fa-bars"></i>
+	<i if={ open } onclick="{ openMenu }" class="fa fa-close"></i>
+	
 	<script>
-    openMenu() {
-    	console.log('opening hamburger')
-    }
-  </script>
+		this.open = false;
+
+		openMenu() {
+			this.open = !this.open;
+			this.open ? this.refs.menu.open() : this.refs.menu.close();
+		}
+	</script>
+
 	<style scoped="scoped">
 		@import 'src/scss/_variables.scss';
 		
@@ -23,7 +31,9 @@
 				background: green;
 			}
 
-			i.fa-bars {
+
+			.fa-bars,
+			.fa-close {
 				font-size: 10vw;
 				color: $black;
 			}
@@ -31,7 +41,9 @@
 			@media all and (min-width: 1024px) {
 				width: 6vw;
 				height: 6vw;
-				i.fa-bars {
+				
+				.fa-close,
+				.fa-bars {
 					font-size: 4vw;
 				}
 			}

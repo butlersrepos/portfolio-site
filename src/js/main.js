@@ -1,15 +1,16 @@
-
 import $ from 'jquery';
 window.$ = $;
 import _ from 'lodash';
 window._ = _;
 import riot from 'riot';
 window.riot = riot;
+import route from 'riot-route';
+window.route = route;
 import moment from 'moment';
 window.moment = moment;
 
 import ga from './google-analytics';
-import '../components/navigation-bar.tag';
+import '../components/navigation-menu.tag';
 import '../components/navigation-link.tag';
 import '../components/about-me.tag';
 import '../components/resume.tag';

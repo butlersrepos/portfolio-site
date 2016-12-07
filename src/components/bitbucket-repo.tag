@@ -1,9 +1,7 @@
 <bitbucket-repo>
 	<h1>{ title }</h1>
 	<div each="{ repos }" class="repo-entry">
-		<div class="repo-name">
-			<a href="{ links.html.href }">{ name }</a>
-		</div>
+		<a class="repo-name" href="{ links.html.href }">{ name }</a>
 		<div class="repo-date">
 			<span class="repo-date-label">Last Update:</span>
 			{ moment( updated_on, "YYYY-MM-DD HH:mm:ss. Z" ).format( "MMM Do, YYYY" ) }

@@ -15,7 +15,8 @@
     "morgan": "^1.5.2",
     "node-sass": "~3.10.1",
     "npm-run-all": "~3.1.1",
-    "riot": "^2.6.4",
+    "riot": "^3.0.2",
+    "riot-route": "^3.0.2",
     "rollup-plugin-riot": "^0.4.3",
     "serve-favicon": "^2.2.0"
   },

@@ -1,9 +1,7 @@
 <github-repo>
 	<h1>{ title }</h1>
 	<div each="{ repos }" class="repo-entry">
-		<div class="repo-name">
-			<a href="{ html_url }">{ name }</a>
-		</div>
+		<a class="repo-name" href="{ html_url }">{ name }</a>	
 		<div class="repo-date">
 			<span class="repo-date-label">Last Update:</span>
 			{ moment( updated_at, "YYYY-MM-DD HH:mm:ss").format( "MMM Do, YYYY" ) }

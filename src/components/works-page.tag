@@ -33,7 +33,7 @@
     				padding: 0 .25em;
 				}
 			}
-			
+
 			.repo-entry {
 				position: relative;
 				margin-bottom: 1em;
@@ -48,12 +48,11 @@
 				display: inline-block;
 				padding: 0 1em;
 				border-radius: 7px;
+				cursor: pointer;
+				text-decoration: none;
 
-				a,
-				a:visited {
-					color: inherit;
-					cursor: pointer;
-					text-decoration: none;
+				&:visited {
+					color: inherit;	
 				}
 			}
 
