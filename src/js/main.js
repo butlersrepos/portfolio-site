@@ -22,9 +22,12 @@ import '../components/github-repo.tag';
 import '../components/bitbucket-repo.tag';
 import '../components/floating-hamburger.tag';
 
+import { createStore } from 'redux';
+
 $(document).ready(function() {
   ga.init();
   riot.mount('*');
+  window.store = createStore();
 });
 
 

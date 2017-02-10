@@ -1,6 +1,7 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonJs from 'rollup-plugin-commonjs';
 import riot from 'rollup-plugin-riot';
+import replace from 'rollup-plugin-replace';
 
 export default {
   entry: 'src/js/main.js',
@@ -9,9 +10,14 @@ export default {
     riot({
       style: 'scss'
     }),
-    commonJs(),
+    commonJs({
+		exclude: ['node_modules/lodash-es/**'] 
+	}),
     nodeResolve({
       browser: true
+    }),
+	replace({
+      'process.env.NODE_ENV': JSON.stringify( 'production' )
     })
   ],
   format: 'iife'

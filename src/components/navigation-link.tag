@@ -1,5 +1,6 @@
-<navigation-link onclick="{ doNavigate }">
-	<div id="about-me-nav" data-url="{ url }" class="permanent-nav menu-option js-about-me-nav">{ description }<i class="nav-icons fa fa-{ icon }"></i></div>
+<navigation-link onclick="{ doNavigate }" data-url="{ url }">
+	<label>{ description }</label>
+	<i class="nav-icons fa fa-{ icon }"></i>
 	
 	<script>
 		this.description = this.opts.description;
@@ -7,7 +8,8 @@
 		this.icon = this.opts.icon;
 
 		doNavigate() {
-			riot.route(this.url);
+			route(this.url);
+			
 		}
 	</script>
 	<style scoped="scoped">
@@ -17,23 +19,23 @@
 			cursor: pointer;
 			color: $black;
 			display: flex;
-			justify-content: center;
 			align-items: center;
 			background: $colorthree;
 			border-top: 1vh solid $black;
-			font-size: 5.5vmin;
+			font-size: 10vw;
 			font-weight: bold;
 			white-space: nowrap;
 			flex: 1 1 auto;
 
-			&:hover {
-				
-
+			@media all and (min-width: 1024px) {
+				font-size: 6vw;
 			}
 
-			.nav-icons {
-				margin-left: .5rem;
+			label {
+				flex-basis: 70%;
 			}
+
+			.nav-icons {}
 		}
 	</style>
 </navigation-link>

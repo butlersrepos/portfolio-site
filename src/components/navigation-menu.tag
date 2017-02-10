@@ -18,7 +18,7 @@
 	<style scoped="scoped">
         :scope {
 			border-bottom: 3vh solid #111;
-            width: 100vw;
+            width: 92vw;
 			height: 75vh;
             position: absolute;
 			right: 0;
@@ -35,6 +35,10 @@
 
 			@media screen and (max-width: 768px) {
 				flex-direction: column-reverse;
+			}
+
+			@media screen and (min-width: 1024px) {
+				width: 94vw;
 			}
         }
     </style>

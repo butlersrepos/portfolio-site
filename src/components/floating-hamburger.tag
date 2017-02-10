@@ -20,7 +20,7 @@
 			width: 12vw;
 			height: 12vw;
 			position: absolute;
-			right: 2vh;
+			right: 4vw;
 			bottom: 12vh;
 			padding: 1vw;
 			background: $colorthree;
@@ -41,7 +41,13 @@
 			@media all and (min-width: 1024px) {
 				width: 6vw;
 				height: 6vw;
-				
+				top: 5vh;
+    			right: 5vh;
+
+				navigation-menu {
+					top: 6vw;
+				}
+
 				.fa-close,
 				.fa-bars {
 					font-size: 4vw;
