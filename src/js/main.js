@@ -23,11 +23,17 @@ import '../components/bitbucket-repo.tag';
 import '../components/floating-hamburger.tag';
 
 import { createStore } from 'redux';
+import reducerUltimus from './reducers/the-reducer';
+import '../scss/main.scss';
+import setupRouter from './router';
 
-$(document).ready(function() {
-  ga.init();
-  riot.mount('*');
-  window.store = createStore();
+$(document).ready(function () {
+	window.store = createStore(reducerUltimus);
+
+	ga.init();
+	riot.mount('*');
+
+	setupRouter();
 });
 
 

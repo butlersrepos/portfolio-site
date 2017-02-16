@@ -3,27 +3,12 @@
   <head>
 	<title>Eric Butler</title>
 	<meta content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=no" name="viewport">
-	<link rel="stylesheet" href="/css/bundled.css">
+	<link rel="stylesheet" href="/css/bundle.css">
 	<link rel="shortcut icon" href="imgs/favicon.ico">
 	<script src="/js/bundled.js"></script>
   </head>
   <body>
 	<main></main>
 	<floating-hamburger></floating-hamburger>
-	<script>
-	  route('aboutme', function() {
-			console.log('ROUTING');
-	  	riot.mount('main', 'about-me');
-	  });
-	  route('resume', function() {
-	  	$.ajax('/api/resume/get').then(function(resume) {
-	  		riot.mount('main', 'resume', resume);
-	  	});
-	  });
-	  route('works', function() {
-	  	riot.mount('main', 'works-page');
-	  });
-	  route.start(true);
-	</script>
   </body>
 </html>

@@ -1,35 +1,36 @@
-<navigation-menu>
+<navigation-menu class={ isOpen ? 'open' : 'closed' }>
     <navigation-link description="About Me" url="aboutme" icon="info-circle"></navigation-link>
     <navigation-link description="Resumé" url="resume" icon="file-text"></navigation-link>
-    <navigation-link description="Works" url="works" icon="folder-open"></navigation-link>
+    <navigation-link description="Repos" url="works" icon="folder-open"></navigation-link>
+	<navigation-link description="Experiments" url="experiments" icon="flask"></navigation-link>
     
 	<script>
-		open() {
-			this.root.classList.remove('closed');
-			this.root.classList.add('open');
-		}
-	
-		close() {
-			this.root.classList.remove('open');
-			this.root.classList.add('closed');
-		}
+		this.isOpen = store.getState().isMenuOpen
+
+		store.subscribe(() => {
+			this.isOpen = store.getState().isMenuOpen
+			this.update()
+		});
 	</script>
 	
 	<style scoped="scoped">
         :scope {
-			border-bottom: 3vh solid #111;
+			border-bottom: 3vh solid transparent;
             width: 92vw;
 			height: 75vh;
             position: absolute;
-			right: 0;
 			bottom: 100%;
-			display: none;
+			right: -100vw;
+			transition: right .33s ease-in, opacity .33s linear;
+			opacity: 0;
+			display: flex;
 			flex-direction: column;
 			justify-content: center;
-            align-items: stretch;
+			align-items: stretch;
 
 			&.open {
-				display: flex;
+				opacity: 1;
+				right: 0;
 			}
 
 

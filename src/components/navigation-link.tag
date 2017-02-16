@@ -1,15 +1,17 @@
+import Actions from '../js/actions/index'
+
 <navigation-link onclick="{ doNavigate }" data-url="{ url }">
 	<label>{ description }</label>
 	<i class="nav-icons fa fa-{ icon }"></i>
 	
 	<script>
-		this.description = this.opts.description;
-		this.url = this.opts.url;
-		this.icon = this.opts.icon;
+		this.description = this.opts.description
+		this.url = this.opts.url
+		this.icon = this.opts.icon
 
 		doNavigate() {
-			route(this.url);
-			
+			route(this.url)
+			store.dispatch(Actions.menuToggle(false))
 		}
 	</script>
 	<style scoped="scoped">

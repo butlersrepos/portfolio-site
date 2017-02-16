@@ -27,10 +27,22 @@
 	<style scoped type="scss">
 		@import 'src/scss/variables';
 		:scope {
+			@keyframes pulse-padding {
+				0% {
+					padding: 0 .25em;
+					margin-left: .25em;
+				}
+				100% {
+					padding: .25em .5em;
+					margin-left: 0;
+				}
+			}
+
 			.repo-updated-last {
 				.timestamp {
 					border: 3px solid #eee;
     				padding: 0 .25em;
+					animation: pulse-padding infinite 1s alternate running;
 				}
 			}
 
@@ -45,15 +57,12 @@
 				font-size: 1.25em;
 				color: black;
 				background: $colorthree;
+				background: $specialBackground;
 				display: inline-block;
 				padding: 0 1em;
 				border-radius: 7px;
 				cursor: pointer;
 				text-decoration: none;
-
-				&:visited {
-					color: inherit;	
-				}
 			}
 
 			.repo-description {

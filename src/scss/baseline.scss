@@ -3,6 +3,7 @@
 html {
 	background: $siteBackground;
 	color: $textColor;
+	overflow: hidden;
 
 	main,
 	#bottom-navigation {
@@ -12,11 +13,15 @@ html {
 	main {
 		position: absolute;
 		font-size: 3.5vmin;
-		top: 10vh;
+		top: 5vh;
 		height: 90vh;
 		width: 100vw;
 		padding: 1em;
 		overflow-x: hidden;
 		overflow-y: auto;
 	}
+}
+
+a:visited {
+	color: inherit;
 }

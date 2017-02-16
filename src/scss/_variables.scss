@@ -26,3 +26,4 @@ $colortwo: $teal;
 $colorthree: $green;
 //$colorfour: $gray
 $colorfour: #ccc;
+$specialBackground: radial-gradient($colorthree 0%, $colorthree 50%, darken($colorthree, 20%) 75%, darken($colorthree, 20%) 100%);
