@@ -40,7 +40,7 @@
 
 			.repo-updated-last {
 				.timestamp {
-					border: 3px solid #eee;
+					border: 3px solid $textColor;
     				padding: 0 .25em;
 					animation: pulse-padding infinite 1s alternate running;
 				}
