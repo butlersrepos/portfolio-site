@@ -8,6 +8,9 @@ export default function (state, action) {
 		case Types.MENU_TOGGLE:
 			nextState.isMenuOpen = action.isOpen
 			break
+		case Types.PROFANITY_TOGGLE:
+			nextState.isProfane = action.value
+			break
 	}
 	
 	return nextState

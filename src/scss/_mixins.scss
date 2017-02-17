@@ -13,6 +13,28 @@ $regularSize: 1024px;
 	display: flex;
 }
 
+@mixin flex-row($evenChildren: false) {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	& > * {
+		flex: if( $evenChildren, 1 1 auto, initial);
+	}
+}
+
+@mixin flex-col($evenChildren: false) {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	& > * {
+		flex: if( $evenChildren, 1 1 auto, initial);
+	}
+}
+
 @mixin card($depth) {
 	@if $depth < 1 {
 		box-shadow: none;
