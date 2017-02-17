@@ -36,7 +36,7 @@
     "rollup": "^0.34.10",
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-watch": "^2.5.0",
+    "rollup-watch": "~3.2.2",
     "stream-series": "^0.1.1"
   },
   "scripts": {
@@ -44,7 +44,7 @@
     "build-imgs": "mkdirp dist/imgs && cp -r src/imgs/* dist/imgs/",
     "build-fonts": "mkdirp dist/fonts && cp -r src/fonts/* dist/fonts/",
     "rollup": "rollup --config rollup.config.js",
-	"rollup-watch": "rollup --config rollup.config.js --watch",
+    "rollup-watch": "rollup --config rollup.config.js --watch",
     "predeploy": "git pull && forever stop mainServer.js &",
     "deploy": "npm install && npm build",
     "postdeploy": "forever start mainServer.js",

@@ -8,10 +8,15 @@ router.get('/home', homePage);
 router.get('/aboutme', aboutMePage);
 router.get('/resume', resumePage);
 router.get('/works', worksPage);
+
 router.get('/api/resume/get', getJsonResume);
 router.get('/api/githubs', getGithubs);
 router.get('/api/bitbuckets', getBitbuckets);
 router.get('/api/repos/lastupdate', getLastRepoUpdateTime);
+
+router.get('/browserdemons', function(req, res) {
+  res.redirect('http://ericbutler.info:8080');
+});
 
 module.exports = router;
 

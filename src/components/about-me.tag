@@ -7,7 +7,7 @@
 			<li>Disparate design patterns used throughout</li>
 			<li>Mostly accurate information about my experience and contact info</li>
 			<li>Unfinished half-projects</li>
-			<li>Web-by things that are wholly unresponsively designed AND non-compliant with IE</li>
+			<li>Web devy things that are wholly unresponsively designed AND non-compliant with IE</li>
 		</ul>
 	</section>
 	<section>
@@ -25,4 +25,10 @@
 			<li>I do no test-drive this site like I do my actual work :)</li>
 		</ul>
 	</section>
+
+	<style scoped="scoped">
+		:scope {
+			width: 85vw;
+		}
+	</style>
 </about-me>

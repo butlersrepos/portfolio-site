@@ -23,7 +23,7 @@ import Actions from '../js/actions/index'
 			display: flex;
 			align-items: center;
 			background: $colorthree;
-			border-top: 1vh solid $black;
+			margin-top: 1vh;
 			font-size: 10vw;
 			font-weight: bold;
 			white-space: nowrap;

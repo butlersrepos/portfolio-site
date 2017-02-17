@@ -18,24 +18,23 @@ import Actions from '../js/actions/index'
 	</script>
 
 	<style scoped="scoped">
-		@import 'src/scss/_variables.scss';
+		@import 'src/scss/variables.scss';
 		
 		:scope {
-			box-shadow: 0px 0px 9px 7px rgb(191, 191, 191), 0px 0px 12px 14px darken($colorthree, 20%);
 			width: 12vw;
 			height: 12vw;
 			position: absolute;
 			right: 4vw;
 			bottom: 12vh;
-			cursor: pointer;
 			padding: 1vw;
-			background: $colorthree;
-			background: $specialBackground;
 			border-radius: 40%;
 			text-align: center;
-			
-			&:hover {
-				background: green;
+			transition: background .5s ease-in, box-shadow .1s ease-in;
+			background: $colorthree;
+			box-shadow: 0px 6px 1px 0px darkgreen;
+
+			&:active {
+				box-shadow: 0px 2px 0px 0px darkgreen;
 			}
 
 

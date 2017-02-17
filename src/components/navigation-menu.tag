@@ -1,5 +1,6 @@
 <navigation-menu class={ isOpen ? 'open' : 'closed' }>
     <navigation-link description="About Me" url="aboutme" icon="info-circle"></navigation-link>
+    <navigation-link description="Posts" url="posts" icon="coffee"></navigation-link>
     <navigation-link description="Resumé" url="resume" icon="file-text"></navigation-link>
     <navigation-link description="Repos" url="works" icon="folder-open"></navigation-link>
 	<navigation-link description="Experiments" url="experiments" icon="flask"></navigation-link>
