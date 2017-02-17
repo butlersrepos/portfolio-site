@@ -29,7 +29,7 @@ import ActionTypes from '../js/actions/action-types';
 
     <hr />
     <h2>The Open Workspace :-?</h2>
-    <p>This idea has been the hotfire in tech as long as I've been in it (since 2010) and I'm just now 
+    <p>This idea has been the hotfire in tech as long as I've been in it (since 2011) and I'm just now 
     beginning to think it may not be the obvious best choice for everyone, including me. It's hard to quantify 
     the pros & cons; do I really benefit enough from overhearing project conversations to offset the distractions that 
     necessarily accompany the setup? 
