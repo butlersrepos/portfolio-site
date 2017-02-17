@@ -37,7 +37,7 @@ import ActionTypes from '../js/actions/action-types';
     I think answering that starts the conversation about what kind of team culture 
     you have. Are you the kind of team that gathers around a monitor to watch any YouTube video someone pulls up?
     For everybody's sake I hope you have a team that knows how to say "enough { profane ? 'dicking' : 'screwing' } around
-    let's knock out some problems".
+    let's knock out some problems". My bottom line is - it's dependent on your team maturity and definitely NOT the automagic decision.
     </p>
 
     <script>
