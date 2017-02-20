@@ -18,14 +18,9 @@ app.use(require('body-parser').urlencoded({extended: false}));
 app.use(require('morgan')('dev'));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'views')));
-
-function shouldCompress (req, res) {
-  if (req.headers['x-no-compression']) {
-    return false
-  }
-
-  return compression.filter(req, res)
-}
+// Civic hacks hosting
+app.use(express.static(path.join(__dirname, '../civichacksgame2015/views')));
+app.use(express.static(path.join(__dirname, '../civichacksgame2015/')));
 
 // development only
 if ('development' == app.get('env')) {

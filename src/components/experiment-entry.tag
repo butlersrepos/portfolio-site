@@ -20,7 +20,7 @@
         :scope {
             @include flex-row();
             flex-wrap: wrap;
-            height: 2em;
+            justify-content: space-around;
 
             & > * {
                 height: 100%;
@@ -30,6 +30,7 @@
                 margin: 0;
                 @include flex-col();
                 padding: 0 1em;
+                flex-basis: 70%;
             }
 
             .caret { 
@@ -37,14 +38,11 @@
             }
 
             .icon {
-                transform: rotate(45deg);
+                transform: rotate(15deg);
 
                 &:before {
                     cursor: pointer;
-                    background: radial-gradient(
-                        50% 23% at 50% 54%,
-                        $ctaColor 0%, $ctaColor 99%, transparent 100%
-                    );
+                    background: radial-gradient(50% 24% at 50% 52%, #2ECC40 0%, #2ECC40 99%, transparent 100%);
                 }
             }
 
