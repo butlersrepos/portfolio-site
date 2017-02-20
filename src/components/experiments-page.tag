@@ -13,7 +13,7 @@
         allowed him to control not only adding new content/comics but also designating which comics were free at
         any given time. App subsequently released on Amazon as well.">
     </experiment-entry>
-    <experiment-entry title="Water Jam 2015" icon="play-circle" url="/waterjam.html" untilt
+    <experiment-entry title="Water Jam 2015" icon="gamepad" url="/waterjam.html" untilt
         description="Two coworkers and I made this for a very short hack-a-thon project to raise awareness about water shortage issues. 
         While NOT mobile friendly this game does showcase how crude my javascript skills were three years ago. :D Strongly based on pipe dream
         for NES and featuring free music and art assets created for this project specifically. I handled the vast majority of the javascript.">
