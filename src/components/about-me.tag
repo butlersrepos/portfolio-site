@@ -22,7 +22,7 @@
 	</section>
 	<section>Disclaimer to current or potential employers
 		<ul>
-			<li>I do no test-drive this site like I do my actual work :)</li>
+			<li>I do not test-drive this site like I do my actual work</li>
 		</ul>
 	</section>
 
