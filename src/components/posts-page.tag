@@ -1,8 +1,8 @@
 import ActionTypes from '../js/actions/action-types';
 
 <posts-page>   
-    <h1>Delivering the BVs.</h1>
-    <span onclick={ toggleProfanity } class="profanity-filter fa-stack fa-lg">
+    <h1>Delivering the <span onclick={ testActivate }>BVs.<span></h1>
+    <span if={ activated } onclick={ toggleProfanity } class="profanity-filter fa-stack fa-lg">
         <i class="fa fa-stack fa-stack-2x fa-exclamation"></i>
         <i if={ !profane } class="fa fa-stack fa-stack-2x fa-ban"></i>
     </span>
@@ -41,7 +41,8 @@ import ActionTypes from '../js/actions/action-types';
     </p>
 
     <script>
-        this.profane = false;
+        this.profane = false
+        this.activateCounter = 0
 
         this.on('before-mount', () => {
             this.checkProfanity()
@@ -61,6 +62,11 @@ import ActionTypes from '../js/actions/action-types';
         checkProfanity() {
             this.profane = store.getState().isProfane;        
             this.update();
+        }
+
+        testActivate() {
+            if( ++this.activateCounter > 6 ) this.activated = true
+
         }
     </script>
 
