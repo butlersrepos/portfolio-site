@@ -7,4 +7,5 @@
         A rudimentary loot system was started but the project was side-lined as most 
         directionless projects are.">
     </experiment-entry>
+    <h3>More to come... [Feb 19th, 2017]</h3>
 </experiments-page>
