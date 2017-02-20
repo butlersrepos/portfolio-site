@@ -1,7 +1,5 @@
 import $ from 'jquery';
 window.$ = $;
-import _ from 'lodash';
-window._ = _;
 import riot from 'riot';
 window.riot = riot;
 import route from 'riot-route';

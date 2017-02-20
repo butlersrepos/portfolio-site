@@ -52,7 +52,6 @@ import ActionTypes from '../js/actions/action-types';
         })
 
         toggleProfanity() { 
-            console.log('toggling p');
             store.dispatch({ 
                 type: ActionTypes.PROFANITY_TOGGLE, 
                 value: !this.profane 

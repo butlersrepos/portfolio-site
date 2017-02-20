@@ -5,3 +5,4 @@ bower_components/
 typings/
 dist/
 .editorconfig
+.DS_Store

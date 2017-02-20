@@ -4,19 +4,28 @@ var http = require('http');
 var https = require('https');
 var path = require('path');
 var moment = require('moment');
+var compression = require('compression');
 
-// Setup EJS wit handlebars like syntax
 var app = express();
 
 // all environments
 app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
+app.use(compression());
 app.use(require('serve-favicon')(__dirname + '/dist/imgs/favicon.ico'));
 app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({extended: false}));
 app.use(require('morgan')('dev'));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'views')));
+
+function shouldCompress (req, res) {
+  if (req.headers['x-no-compression']) {
+    return false
+  }
+
+  return compression.filter(req, res)
+}
 
 // development only
 if ('development' == app.get('env')) {
