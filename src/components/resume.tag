@@ -21,7 +21,7 @@
 					<li>Node enthusiast</li>
 					<li>JS build tool connoisseur</li>
 					<li>Java capable</li>
-					<li>Functional (programming) admirer</li>
+					<li>Functional programming admirer</li>
 				</ul>
 		</div>
 	</section>

@@ -8,7 +8,9 @@ export default function () {
 	route('restaurant-template', () => riot.mount('main', 'restaurant-page'));
 
 	route('resume', function () {
-		$.ajax('/api/resume/get').then(function (resume) {
+		fetch('/api/resume/get')
+		.then(resp => resp.json())
+		.then(function (resume) {
 			riot.mount('main', 'resume', resume);
 		});
 	});
