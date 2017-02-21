@@ -11,14 +11,18 @@
         });
 
 		updateGithubRepos() {
-			$.ajax('/api/githubs').then(githubs => {
+			fetch('/api/githubs')
+			.then(resp => resp.json())
+			.then(githubs => {
                 this.github_repos = githubs;
                 this.update();
             });
 		}
 
 		updateBitbucketRepos() {
-			$.ajax('/api/bitbuckets').then( bitbuckets => {
+			fetch('/api/bitbuckets')
+			.then( resp => resp.json())
+			.then( bitbuckets => {
 				this.bitbucket_repos = bitbuckets;
 				this.update();
 			});

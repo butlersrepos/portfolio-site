@@ -5,7 +5,8 @@ export default function () {
 	route('posts', () => riot.mount('main', 'posts-page'));
 	route('works', () => riot.mount('main', 'works-page'));
 	route('experiments', () => riot.mount('main', 'experiments-page'));
-	
+	route('restaurant-template', () => riot.mount('main', 'restaurant-page'));
+
 	route('resume', function () {
 		$.ajax('/api/resume/get').then(function (resume) {
 			riot.mount('main', 'resume', resume);
