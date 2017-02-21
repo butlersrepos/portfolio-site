@@ -1,5 +1,3 @@
-import $ from 'jquery';
-window.$ = $;
 import riot from 'riot';
 window.riot = riot;
 import route from 'riot-route';
@@ -28,14 +26,14 @@ import reducerUltimus from './reducers/the-reducer';
 import '../scss/main.scss';
 import setupRouter from './router';
 
-$(document).ready(function () {
+window.onload = function () {
 	window.store = createStore(reducerUltimus);
 
 	ga.init();
 	riot.mount('*');
 
 	setupRouter();
-});
+};
 
 
 
