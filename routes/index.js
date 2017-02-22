@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.get('/', mainPage);
 
-router.get('/restaurant/hours', function(req, res) {
+router.get('/restaurant/hours', function (req, res) {
 	res.redirect('https://s3.us-east-2.amazonaws.com/restaurant.ericbutler.info/hours.json');
 });
 
