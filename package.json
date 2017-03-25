@@ -50,7 +50,7 @@
     "rollup": "rollup --config rollup.config.js",
     "rollup-watch": "rollup --config rollup.config.js --watch",
     "predeploy": "git pull && forever stop mainServer.js &",
-    "deploy": "npm install && npm build",
+    "deploy": "npm install && npm run build",
     "postdeploy": "forever start mainServer.js",
     "start": "npm run build && node mainServer.js",
     "server": "nodemon mainServer.js --watch mainServer.js --watch views/ --watch routes/",
