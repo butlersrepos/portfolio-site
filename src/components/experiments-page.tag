@@ -1,5 +1,10 @@
 <experiments-page>
     <h1>Small projects that I don't mind showing.</h1>
+    <experiment-entry title="Reduxtris" icon="gamepad" url="/reduxtris.html"
+        description="An experiment in using Redux to manage the state of a game, Tetris in this case. The view layer was done in Riot first 
+        with more implementations to come. All resources are automatically built through a TravisCI job and deployed to an S3 instance for
+        instant 'prod deploys' to this page.">
+    </experiment-entry>
     <experiment-entry title="Browser Demons" icon="gamepad" url="/browserdemons"
         description="A really basic multiplayer rogue-like built on NodeJS
         with sockets and canvas. The only implemented features are a group-chat, 
@@ -13,7 +18,7 @@
         allowed him to control not only adding new content/comics but also designating which comics were free at
         any given time. App subsequently released on Amazon as well.">
     </experiment-entry>
-    <experiment-entry title="Water Jam 2015" icon="gamepad" url="/waterjam.html" untilt
+     <experiment-entry title="Water Jam 2015" icon="gamepad" url="/waterjam.html"
         description="Two coworkers and I made this for a very short hack-a-thon project to raise awareness about water shortage issues. 
         While NOT mobile friendly this game does showcase how crude my javascript skills were three years ago. :D Strongly based on pipe dream
         for NES and featuring free music and art assets created for this project specifically. I handled the vast majority of the javascript.">

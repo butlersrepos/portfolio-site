@@ -3,7 +3,6 @@ var resumeJson = require('../src/my-resume');
 var express = require('express');
 var router = express.Router();
 
-router.get('/', mainPage);
 
 router.get('/restaurant/hours', function (req, res) {
 	res.redirect('https://s3.us-east-2.amazonaws.com/restaurant.ericbutler.info/hours.json');
@@ -14,18 +13,15 @@ router.get('/api/githubs', getGithubs);
 router.get('/api/bitbuckets', getBitbuckets);
 router.get('/api/repos/lastupdate', getLastRepoUpdateTime);
 
+router.get('/', (req, res) => {
+	res.render('index.html');
+});
+
 router.get('/browserdemons', function (req, res) {
 	res.redirect('http://ericbutler.info:8080');
 });
 
 module.exports = router;
-
-// Main Start Page
-function mainPage(req, res) {
-	console.log('Starting!');
-	res.sendFile('index.html');
-	console.log(req.host)
-}
 
 // RESTful API Stuff
 function getJsonResume(req, res) {
