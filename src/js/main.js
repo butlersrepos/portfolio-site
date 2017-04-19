@@ -11,7 +11,6 @@ import '../components/navigation-menu.tag';
 import '../components/navigation-link.tag';
 import '../components/about-me.tag';
 import '../components/resume.tag';
-import '../components/posts-page.tag';
 import '../components/experiments-page.tag';
 import '../components/experiment-entry.tag';
 import '../components/education-entry.tag';
