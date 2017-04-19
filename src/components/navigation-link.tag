@@ -10,7 +10,7 @@ import Actions from '../js/actions/index'
 		this.icon = this.opts.icon
 
 		doNavigate() {
-			route(this.url)
+			this.opts.external ? window.location.href = this.url : route(this.url)
 			store.dispatch(Actions.menuToggle(false))
 		}
 	</script>
