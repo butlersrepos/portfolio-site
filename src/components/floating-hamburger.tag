@@ -24,10 +24,9 @@ import Actions from '../js/actions/index'
 			width: 12vw;
 			height: 12vw;
 			position: absolute;
-			right: 4vw;
+			right: 0;
 			bottom: 12vh;
 			padding: 1vw;
-			border-radius: 40%;
 			text-align: center;
 			transition: background .5s ease-in, box-shadow .1s ease-in;
 			background: $colorthree;
@@ -44,19 +43,19 @@ import Actions from '../js/actions/index'
 				color: $black;
 			}
 
-			@media all and (min-width: 1024px) {
-				width: 6vw;
-				height: 6vw;
-				top: 5vh;
-    			right: 5vh;
+			@media all and (min-width: 768px) {
+				width: 60px;
+				height: 60px;
+				top: 1rem;
+    			right: 0;
 
 				navigation-menu {
-					top: 6vw;
+					top: calc(1rem + 60px);
 				}
 
 				.fa-close,
 				.fa-bars {
-					font-size: 4vw;
+					font-size: 42px;
 				}
 			}
 		}

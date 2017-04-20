@@ -7,7 +7,7 @@ export default function () {
 	route('restaurant-template', () => riot.mount('main', 'restaurant-page'));
 	
 	route('resume', function () {
-		fetch('/api/resume/get')
+		fetch('/api/resume')
 			.then(resp => resp.json())
 			.then(function (resume) {
 				riot.mount('main', 'resume', resume);

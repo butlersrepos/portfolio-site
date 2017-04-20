@@ -5,7 +5,7 @@ module.exports = {
 	"bio_data"   : {
 		"location"    : "Columbus, OH",
 		"email"       : "ericbutler000@gmail.com",
-		"phone"       : "(419) 366-9274",
+		"phone"       : "419.366.9274",
 		"website"     : "ericbutler.info",
 		"skills"      : {
 			"languages"       : [
@@ -18,6 +18,8 @@ module.exports = {
 				"SASS & LESS",
 				"Angular",
 				"RiotJS",
+				"React",
+				"Jest",
 				"Web Components",
 				"All the build tools"
 			],
@@ -31,16 +33,46 @@ module.exports = {
 				"VS Code"
 			],
 			"methodologies"   : [
-				"agile"
+				"agile",
+				"whatever works for the team"
 			]
 		},
 		"hobbies"   : [
-			"D&D",
-			"M:tg",
+			"Mtg",
 			"PC Games",
 			"Weight-Lifting",
 			"shitty Electronic music",
 			"Web dev"
+		],
+		"spouse": {
+			"firstname": "Lauren",
+			"lastname": "Quelette"
+		},
+		"pets": [
+			{ 
+				"species": "rabbit",
+				"name": "digby"
+			},
+			{ 
+				"species": "rabbit",
+				"name": "mocha"
+			},
+			{ 
+				"species": "rat",
+				"name": "butters"
+			},
+			{ 
+				"species": "rat",
+				"name": "velcro"
+			},
+			{ 
+				"species": "cat",
+				"name": "wally"
+			},
+			{ 
+				"species": "dog",
+				"name": "romy"
+			}
 		],
 		"education" : {
 			"schools": [
@@ -88,11 +120,20 @@ module.exports = {
 			],
 			"projects" : [
 				{
+					"client": "OhioHealth",
+					"client_link": "https://www.ohiohealth.com/",
+					"location"   : "Columbus, OH",
+					"start"      : "May 2016",
+					"end"        : "Present",
+					"project"    : "Hybrid Mobile App",
+					"description": "Brand new iOS and Android application for client care, doctor finding, bill pay, appointments, etc. Built on top of apache cordova with HTML5-spec custom components. Played the role of SME, Tech Lead, and educator in the javascript space. Worked closely with design, product owner, and multiple 3rd parties."
+				},
+				{
 					"client": "The GAP",
 					"client_link": "http://www.gap.com",
 					"location"   : "Columbus, OH",
 					"start"      : "October 2015",
-					"end"        : "Present",
+					"end"        : "May 2016",
 					"project"    : "Ecommerce",
 					"description": "Legacy technology stack of Struts, Spring, JAWR, Grunt, Gulp, JSPs, Angular, DWR. This project was a ultra-long-lived mish-mash of design patterns and glue."
 				},

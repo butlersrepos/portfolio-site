@@ -28,6 +28,7 @@ import Actions from '../js/actions/index'
 			font-weight: bold;
 			white-space: nowrap;
 			flex: 1 1 auto;
+			box-shadow: 5px 4px 6px 0px black;
 
 			@media all and (min-width: 1024px) {
 				font-size: 6vw;

@@ -15,28 +15,46 @@
 	</script>
 	
 	<style scoped="scoped">
-        :scope {
+        $links: 5;
+
+		:scope {
 			border-bottom: 3vh solid transparent;
             width: 92vw;
-			height: 75vh;
+			height: 70vh;
             position: absolute;
 			bottom: 100%;
 			right: -100vw;
-			transition: right .33s ease-in, opacity .33s linear;
 			opacity: 0;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: stretch;
 
+			navigation-link {
+				position: relative;
+				opacity: 0;
+				right: -100vw;
+			}
+
 			&.open {
 				opacity: 1;
 				right: 0;
-			}
 
+				navigation-link {
+					opacity: 1;
+					right: 0;
+				}
+
+				@for $i from 1 through $links {
+					navigation-link:nth-child(#{$i}) {
+						transition: right .33s ($i * .1s) ease-in, opacity .33s linear;
+					}
+				}
+			}
 
 			@media screen and (max-width: 768px) {
 				flex-direction: column-reverse;
+				border-bottom: 1vh solid transparent;
 			}
 
 			@media screen and (min-width: 1024px) {

@@ -8,7 +8,7 @@ router.get('/restaurant/hours', function (req, res) {
 	res.redirect('https://s3.us-east-2.amazonaws.com/restaurant.ericbutler.info/hours.json');
 });
 
-router.get('/api/resume/get', getJsonResume);
+router.get('/api/resume', getJsonResume);
 router.get('/api/githubs', getGithubs);
 router.get('/api/bitbuckets', getBitbuckets);
 router.get('/api/repos/lastupdate', getLastRepoUpdateTime);

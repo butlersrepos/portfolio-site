@@ -1,6 +1,6 @@
 <assignment-entry>
 	<div class="resume-date-entry">
-		<div class="resume-event">'Client: '<a target="_blank" href="{ client_link }">{ client }</a>, { location }</div>
+		<div class="resume-event">Client: <a target="_blank" href="{ client_link }">{ client }</a>, { location }</div>
 		<div class="resume-event-date">{ start } - { end}</div>
 		<div class="resume-paragraph">{ description }</div>
 	</div>
@@ -8,6 +8,7 @@
 	<style scoped>
 		@import "./src/scss/variables";
 		:scope {
+			display: block;
 			margin-bottom: 2rem;
 			
 			.resume-event {
