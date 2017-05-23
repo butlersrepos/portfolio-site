@@ -1,10 +1,12 @@
+import 'babel-polyfill'
+import 'whatwg-fetch';
+
 import riot from 'riot';
 window.riot = riot;
 import route from 'riot-route';
 window.route = route;
 import moment from 'moment';
 window.moment = moment;
-import 'whatwg-fetch';
 
 import ga from './google-analytics';
 import '../components/navigation-menu.tag';

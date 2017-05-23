@@ -1,9 +1,9 @@
 <navigation-menu class={ isOpen ? 'open' : 'closed' }>
-    <navigation-link description="About Me" url="aboutme" icon="info-circle"></navigation-link>
-    <navigation-link description="Posts" url="http://butlersrepos.github.io" icon="coffee" external=true></navigation-link>
-    <navigation-link description="Resumé" url="resume" icon="file-text"></navigation-link>
-    <navigation-link description="Repos" url="works" icon="folder-open"></navigation-link>
-	<navigation-link description="Experiments" url="experiments" icon="flask"></navigation-link>
+    <navigation-link tabindex="1" description="About Me" url="aboutme" icon="info-circle"></navigation-link>
+    <navigation-link tabindex="2" description="Posts" url="http://butlersrepos.github.io" icon="coffee" external=true></navigation-link>
+    <navigation-link tabindex="3" description="Resumé" url="resume" icon="file-text"></navigation-link>
+    <navigation-link tabindex="4" description="Repos" url="works" icon="folder-open"></navigation-link>
+	<navigation-link tabindex="5" description="Experiments" url="experiments" icon="flask"></navigation-link>
     
 	<script>
 		this.isOpen = store.getState().isMenuOpen

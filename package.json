@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "~6.23.0",
     "body-parser": "^1.12.3",
     "compression": "~1.6.2",
     "cp": "~0.2.0",

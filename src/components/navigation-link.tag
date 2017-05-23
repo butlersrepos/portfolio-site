@@ -1,6 +1,6 @@
 import Actions from '../js/actions/index'
 
-<navigation-link onclick="{ doNavigate }" data-url="{ url }">
+<navigation-link onclick="{ doNavigate }" oninput="{ doNavigate }" data-url="{ url }">
 	<label>{ description }</label>
 	<i class="nav-icons fa fa-{ icon }"></i>
 	

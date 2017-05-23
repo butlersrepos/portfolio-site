@@ -1,17 +1,20 @@
 import clone from 'lodash/clone'
 import Types from '../actions/action-types'
 
-export default function (state, action) {
-	let nextState = clone(state || {})
+const initialState = {
+  isMenuOpen: false,
+  isProfane: false
+}
 
-	switch (action.type) {
-		case Types.MENU_TOGGLE:
-			nextState.isMenuOpen = action.isOpen
-			break
-		case Types.PROFANITY_TOGGLE:
-			nextState.isProfane = action.value
-			break
-	}
-	
-	return nextState
+export default function (state = initialState , action) {
+  let nextState = clone(state || {})
+
+  switch (action.type) {
+    case Types.MENU_TOGGLE:
+      return Object.assign({}, state, { isMenuOpen: action.isOpen })
+    case Types.PROFANITY_TOGGLE:
+      return Object.assign({}, state, { isProfane: action.value })
+  }
+
+  return nextState
 }

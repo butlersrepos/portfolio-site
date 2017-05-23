@@ -1,4 +1,4 @@
-import Actions from '../js/actions/index'
+import Actions from '../js/actions'
 
 <floating-hamburger>
 	<navigation-menu ref="menu"></navigation-menu>
@@ -6,6 +6,17 @@ import Actions from '../js/actions/index'
 	<i if={ isOpen } onclick="{ closeMenu }" class="fa fa-close"></i>
 	
 	<script>
+		document.addEventListener('keypress', event => {
+			console.log(event)
+			if(event.code === "Space") {
+				store.dispatch(Actions.menuToggle(!store.getState().isMenuOpen))
+			} 
+
+			if(event.code === "Enter") {
+				document.activeElement.dispatchEvent(new Event('click'))
+			}
+		})
+
 		this.isOpen = store.getState().isMenuOpen
 
 		store.subscribe(() => {
