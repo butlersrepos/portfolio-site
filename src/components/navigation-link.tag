@@ -24,11 +24,15 @@ import Actions from '../js/actions/index'
 			align-items: center;
 			background: $colorthree;
 			margin-top: 1vh;
-			font-size: 10vw;
 			font-weight: bold;
 			white-space: nowrap;
 			flex: 1 1 auto;
 			box-shadow: 5px 4px 6px 0px black;
+			font-size: 7vw;
+
+			@media all and (min-width: 480px) {
+				font-size: 8vw;
+			}
 
 			@media all and (min-width: 1024px) {
 				font-size: 6vw;
@@ -38,7 +42,19 @@ import Actions from '../js/actions/index'
 				flex-basis: 70%;
 			}
 
-			.nav-icons {}
+			@media all and (min-width: 768px) {
+				label,
+				.nav-icons {
+					font-size: 4vw;
+				}
+			}
+
+			@media all and (min-width: 1280px) {
+				label,
+				.nav-icons {
+					font-size: 3vw;
+				}
+			}
 		}
 	</style>
 </navigation-link>

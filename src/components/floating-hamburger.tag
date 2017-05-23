@@ -23,14 +23,17 @@ import Actions from '../js/actions/index'
 		:scope {
 			width: 12vw;
 			height: 12vw;
-			position: absolute;
+			position: fixed;
 			right: 0;
 			bottom: 12vh;
-			padding: 1vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			text-align: center;
 			transition: background .5s ease-in, box-shadow .1s ease-in;
 			background: $colorthree;
 			box-shadow: 0px 6px 1px 0px darkgreen;
+			border: 1px solid black;
 
 			&:active {
 				box-shadow: 0px 2px 0px 0px darkgreen;

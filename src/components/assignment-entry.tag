@@ -9,7 +9,7 @@
 		@import "./src/scss/variables";
 		:scope {
 			display: block;
-			margin-bottom: 2rem;
+			margin-bottom: 4rem;
 			
 			.resume-event {
 				font-weight: bold;

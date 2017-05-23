@@ -123,6 +123,15 @@ module.exports = {
 					"client": "OhioHealth",
 					"client_link": "https://www.ohiohealth.com/",
 					"location"   : "Columbus, OH",
+					"start"      : "April 2017",
+					"end"        : "Present",
+					"project"    : "Main website",
+					"description": "Taking over ownership of the homepage for OhioHealth.com, serving as Tech Lead, teaching fellow developers React & Redux, incorporating modern frontend design patterns into a legacy web application."
+				},
+				{
+					"client": "OhioHealth",
+					"client_link": "https://www.ohiohealth.com/",
+					"location"   : "Columbus, OH",
 					"start"      : "May 2016",
 					"end"        : "Present",
 					"project"    : "Hybrid Mobile App",

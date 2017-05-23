@@ -7,7 +7,7 @@
 		:scope {
 			display: block;
 			margin-bottom: 2rem;
-			text-indent: 2rem;
+			padding-left: 2rem;
 		}
 	</style>
 </employer-entry>

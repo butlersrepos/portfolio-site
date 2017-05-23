@@ -1,7 +1,9 @@
 <experiment-entry>
-    <i class="caret fa fa-2x { isOpen ? 'fa-caret-down' : 'fa-caret-right' }" onclick={ open }></i>
-    <h2 onclick={ open }>{ this.opts.title }</h2>
-    <button onclick={ navigate }>Go <i class="icon fa fa-2x fa-{ this.opts.icon }"></i></button>
+    <div class="title-bar">
+        <i class="caret fa fa-2x { isOpen ? 'fa-caret-down' : 'fa-caret-right' }" onclick={ open }></i>
+        <h2 onclick={ open }>{ this.opts.title }</h2>
+        <button onclick={ navigate }>Go <i class="icon fa fa-2x fa-{ this.opts.icon }"></i></button>
+    </div>
     <section if={ isOpen } name={ this.opts.title }>
         { this.opts.description }
     </section>
@@ -21,15 +23,20 @@
             @include flex-row();
             flex-wrap: wrap;
             justify-content: space-around;
-            margin-bottom: .5em;
+            margin-bottom: 2rem;
 
             & > * {
                 height: 100%;
             }
 
+            .title-bar {
+                flex-basis: 100%;
+                display: flex;
+                align-items: center;
+            }
+
             h2 {
                 margin: 0;
-                @include flex-col();
                 padding: 0 1em;
                 flex-basis: 70%;
             }

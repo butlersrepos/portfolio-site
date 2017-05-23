@@ -5,7 +5,7 @@
 	<div class="resume-event-date">{ grad_month } { grad_year }</div>
 	<style scoped="scoped">
 		:scope {
-			text-indent: 2rem;
+			padding-left: 2rem;
 			margin-bottom: 2rem;
 			display: block;
 		}
