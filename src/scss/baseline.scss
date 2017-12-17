@@ -18,8 +18,10 @@ html {
 	}
 }
 
+a,
+a:-webkit-any-link,
 a:visited {
-	color: inherit;
+	color: $linkColor;
 }
 
 body {
